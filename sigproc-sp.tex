@@ -4,17 +4,22 @@
 \usepackage{listings}
 
 \usepackage{multirow}
-\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{epstopdf}
 \usepackage{float}
 \usepackage[hyphens]{url}
+\usepackage{etoolbox}
 \usepackage{color}
+\usepackage{listings}
+\usepackage{lscape}
+\usepackage{enumitem}
 \lstset{ %
 language={[x86masm]Assembler},                % choose the language of the code
 basicstyle=\footnotesize,       % the size of the fonts that are used for the code
 numbers=left,                   % where to put the line-numbers
 numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
 stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
-numbersep=5pt,                  % how far the line-numbers are from the code
+numbersep=5pt,                  % how far the line-n/umbers are from the code
 backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
 showspaces=false,               % show spaces adding particular underscores
 showstringspaces=false,         % underline spaces within strings
@@ -95,10 +100,12 @@ INSERT ABSTRACT HERE??
 \keywords{FourthParty, Web crawling, cookies, privacy policy, ...}
 
 \section{Introduction}
+DIEGO
 
 We wish to automate the detection of third-party tracking mechanisms while browsing the web on a mobile device. To this end, we will adopt the FourthParty\footnote{http://www.fourthparty.info} project's approach and instrument a popular open-source mobile browser (i.e. Firefox) to be used as an enhanced web crawler. This enables us to log realistic end-user interactions (e.g. execution of embedded scripts) as opposed to just downloading each web page's static content, which is what traditional web crawlers do.
 
 The mobile web crawler is not our main objective for this project, but rather the tool that we will use to collect valuable information in order to conduct our comparison between the Mobile and Traditional third-party tracking ecosystems and their practices.
+
 
 \section{Background and Motivation}
 
@@ -135,11 +142,50 @@ FourthPartyMobile's architecture (see Figure \ref{fig:component_diagram}) delega
 \end{figure}
 
 
+\begin{figure*}[ht] 
+\centering \includegraphics[scale=0.70]{diagrams/db_diagram.png}
+\captionof{figure}{FourthParty SQLite database schema}
+\label{fig:db_schema}
+\end{figure*}
+
 \subsection{Prototype}
 We took advantage of the fact that the FourthParty\footnote{http://www.fourthparty.info} project is open-source. After analyzing its codebase, we ported its core functionality over to support Android-based mobile devices, such as smartphones and tablets. FourthPartyMobile is implemented in Java and Javascript, leveraging both the Android SDK and the Mozilla Add-On SDK. Persistent storage is fully compliant with FourthParty's SQLite database schema. Thus, we provide a standardized representation for traditional and mobile crawls, which facilitates data analysis. Our Crawling Backend is written in java with a SQLite JDBC library that supports Mac OS, Linux and Windows, so it should be fully multi-platform. It also supports concurrency, so multiple crawls can be recorded simultaneously. 
 
 \section{Methodology}
 DIEGO
+
+\subsection{Automated Crawls}
+
+We tried automating crawls on Firefox Mobile with MozMill, Selenium, Scriptish and Robocop without any success. The few frameworks that are compatible with Android do not support Firefox Mobile (fennec) – they only interact with the lackluster Android Web Browser. To the best of our knowledge (hours worth of Google searches), it seems that there are no testing frameworks out there that can automate Firefox Mobile crawls. Even the browser plugins that do this on the desktop version (e.g. Flem) have not been ported to the Mozilla Mobile SDK. Bare in mind that Mozilla Mobile SDK was released on February 21 of 2012 (Announcing Add-on SDK 1.5!), so it needs more time to mature.
+
+Our solution was to use Javascript code on one site to trigger the crawl on a separate tab. We successfully tested this method on all platforms (i.e. desktop, tablet, smartphone). This, we automated the generation of the HTML website containing the Javascript code to facilitate the creation of these scripts for arbitrary URL lists. A timeout of 30 seconds was used for every one of our crawls, meaning that a new URL was visited every 30 seconds.
+
+\subsection{URL Datasets}
+
+We crawled two URL datasets parsed from \emph{Alexa - Top Sites in United States} on January 7, 2013: (1) Top 100 and (2) Top 500.
+
+After a series of crashes caused by websites containing non-western character sets, we made the decision to focus on the Top US Sites instead of the Top Global Sites.
+
+\subsection{Devices}
+
+All crawls were conducted between January 7, 2013 and January 10, 2013. Six different devices were used to go through the two URL datasets, for a total of 12 result sets.
+
+\begin{itemize}
+\item Desktop (Ubuntu 12.04, Firefox 11.0)
+
+\item Asus Transformer Pad TF300T (10.1-inch Tablet)
+
+\item Samsung Galaxy Tab 2 (7.0-inch Tablet)
+
+\item Emulated Nexus 7 (7.0-inch Tablet)
+
+\item HTC Evo 4G (4.8-inch Smartphone)
+
+\item Emulated Nexus S (4.0-inch Smartphone)
+\end{itemize}
+
+\subsection{FourthParty SQLite Database Schema}
+Figure \ref{fig:db_schema} shows the database schema generated on every crawl.
 
 \section{Data Analysis}
 
