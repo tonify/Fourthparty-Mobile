@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  14 JAN 2013 14:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  14 JAN 2013 14:41
 entering extended mode
  %&-line parsing enabled.
 **sigproc-sp.tex
@@ -385,9 +385,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] (./sigproc-sp.bbl)
-[2
-
- <./diagrams/component_diagram.png (PNG copy)>] (./sigproc-sp.aux) ) 
+[2 <./diagrams/component_diagram.png (PNG copy)>] (./sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
  4460 strings out of 495061
  58356 string characters out of 1182621
@@ -396,16 +394,16 @@ Here is how much of TeX's memory you used:
  48314 words of font info for 66 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  41i,11n,41p,824b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share
-/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-t
-exlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type
-1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8
-a.pfb>
-Output written on sigproc-sp.pdf (2 pages, 111079 bytes).
+{/usr/sha
+re/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf
+-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utm
+b8a.pfb>
+Output written on sigproc-sp.pdf (2 pages, 113772 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
