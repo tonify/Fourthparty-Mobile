@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 02:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 02:24
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -536,31 +536,54 @@ Overfull \hbox (4.6653pt too wide) in paragraph at lines 442--453
 
 [6 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_cd
 f.png>] [7]
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [8
 
-]
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux) ) 
+LaTeX Warning: Citation `amazon' on page 8 undefined on input line 495.
+
+
+LaTeX Warning: Citation `linkedin' on page 8 undefined on input line 495.
+
+
+LaTeX Warning: Citation `cnn' on page 8 undefined on input line 495.
+
+
+LaTeX Warning: Citation `linkedin' on page 8 undefined on input line 505.
+
+
+LaTeX Warning: Citation `linkedin' on page 8 undefined on input line 507.
+
+
+LaTeX Warning: Citation `cnn' on page 8 undefined on input line 507.
+
+
+LaTeX Warning: Citation `amazon' on page 8 undefined on input line 507.
+
+(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [8]
+(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5956 strings out of 494045
- 86239 string characters out of 3145963
+ 5960 strings out of 494045
+ 86279 string characters out of 3145963
  193912 words of memory out of 3000000
- 9110 multiletter control sequences out of 15000+200000
+ 9114 multiletter control sequences out of 15000+200000
  49938 words of font info for 69 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 42i,13n,41p,1416b,302s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
-mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sigproc-sp.pdf (8 pages, 294367 bytes).
+ 42i,13n,41p,1446b,302s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
+w/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on sigproc-sp.pdf (8 pages, 297656 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
