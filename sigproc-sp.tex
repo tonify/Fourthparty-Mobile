@@ -41,6 +41,10 @@ escapeinside={\%*}{*)}          % if you want to add a comment within your code
 
 \begin{document}
 
+% Marmar got really tired of typing privacy policy/policies, so \newcommand please
+\newcommand{\pp}{privacy policy}
+\newcommand{\pps}{privacy policies}
+
 \title{COS 597D Project - Mobile vs Traditional Web Tracking\\(FourthPartyMobile)}
 %
 % You need the command \numberofauthors to handle the 'placement
@@ -483,16 +487,15 @@ After running our web crawls, we designed a case study in which we look at the p
 
 Based on the list of the Alexa Top 100 US visited websites, we chose three websites amongst the top 25 most visited sites, one representing each of our three categories. Our case study examines the privacy policies of LinkedIn\footnote{http://www.linkedin.com} (social network), CNN\footnote{http://www.cnn.com} (news) and Amazon\footnote{http://www.amazon.com} (e-commerce).
 
-The case study has five stages, each stage looking at the privacy policies in more detail:
+The case study has four stages, each stage looking at the privacy policies in more detail:
 \begin{enumerate}
 \item Compare the contents of the privacy policies displayed when visiting each of the sites on our three platforms (desktop, tablet, and smartphone).
 \item Compare the length of the privacy policies of each website.
 \item Examine the topics covered, i.e., the sections included in the policies.
 \item Inspect some of the language used in select sections of the policies.
-\item Compare the presented cookie policies with the collected web crawl data.
 \end{enumerate}
 
-The first question we wanted to answer in our case study was \emph{Do privacy policies vary between normal web and mobile web?} Thus, the first stage of the case study, seeks to answer this question via a very simple method. We visited the three websites on our three platforms and downloaded the presented privacy policies for each site on each platform. This gave us three privacy policies each for LinkedIn, CNN, and Amazon. 
+The question we wanted to answer in our case study was \emph{Do privacy policies vary between normal web and mobile web?} Thus, the first stage of the case study, seeks to answer this question via a very simple method. We visited the three websites on our three platforms and downloaded the presented privacy policies for each site on each platform. This gave us three privacy policies each for LinkedIn, CNN, and Amazon. 
 
 The easiest and quickest way to determine if the contents of the policies differ for a single website was to run the \texttt{diff} command between the policies collected for each pair of platforms\footnote{The policies were all saved as text documents, and stripped of tabs and empty lines via a python script.}: desktop - smartphone, desktop - tablet, and tablet - smartphone. Taking the more pessimistic standpoint, we were expecting to find that a single website's policies would differ more between the three platforms. But what we discovered in reality is that in the cases of LinkedIn and CNN, the privacy policies for all three platforms are exactly identical. \textbf{keep this}We consider this to be a positive finding as this proves that the websites make an effort to maintain consistency across the devices.\textbf{??} In the case of Amazon, the privacy policies presented when visiting the website through a desktop and a tablet are exactly identical. However, the smartphone version of the policy is much shorter and refers the reader to the full (desktop) version of their privacy notice. We would like to note that the fact that the privacy policies were basically all identical for each of the three websites in our case study greatly facilitated our further analysis of the privacy policies. The remaining examinations discussed in this section were done using the desktop version of the policies.
 
@@ -517,19 +520,55 @@ We were not surprised to see that the social network has the longest privacy pol
 
 Once we had examined the privacy policies in terms of their length, we began to analyze them more carefully looking at the topics that they all cover, which are dedicated their own section in most cases. Figure \ref{fig:at-a-glance} shows a comparison of LinkedIn, CNN, and Amazon in terms of the sections these sites include in their privacy policies at a glance. For a full list of the sections, please refer to \cite{amazon,linkedin,cnn}.
 
-!!!INSERT FIG HERE!!!
 \begin{figure} 
 \centering
-%\includegraphics[width=0.7\textwidth]{at-a-glance}
+\includegraphics[width=0.5\textwidth]{at-a-glance}
 \caption{The sections covered in the policies of all three studied sites at a glance. Check-marks denote the existence of a section, X-marks denote the absence of a section.}
 \label{fig:at-a-glance}
 \end{figure}
 
 As can be seen in Figure \ref{fig:at-a-glance}, there are only eight topics which all three privacy policies in our case study cover, including the presence of the last revision date at some position on the web page. It is also important to note that the sections included in CNN's and Amazon's privacy policies correspond to one of the rows in Figure \ref{fig:at-a-glance}, while several of the topics marked as covered in this figure in the LinkedIn policy are in fact subsections of more general sections of their privacy policy. For instance, Section 2 in this privacy policy covers ``How LinkedIn uses your information.", where information sharing is discussed in Section 2.E and third-party content providers are explained in Section 2.K, while cookies are discussed in Section 1.G \cite{linkedin}.
 
+LinkedIn's privacy policy includes a few other features that the other two policies do not have. CNN and Amazon both have short introductory paragraphs in which they state the purpose and mission to protect users' privacy at the beginning of the policy. For instance, CNN's introductory paragraph states the following: 
+\begin{quotation}``Thank you for visiting CNN.com, a site presented to you by Turner Broadcasting System, Inc. ("Turner"). Your privacy is important to us. As such, we provide this privacy statement explaining our online information practices and the choices you can make about the way your information is collected and used at this general audience Turner site, and among Turner's network of affiliated websites ("Turner Network"), which includes any sites or services owned, operated or offered by or on behalf of Turner or its affiliates." \cite{cnn}\end{quotation}
+
+
+A brief statement like this serves the purpose to appease readers who may not want to read through the entire privacy policy, and who are satisfied by knowing that the website even presents such a document.
+
+LinkedIn, on the other hand, include a short ``Privacy Policy Highlights" section at the top of the web page, which summarizes the full privacy policy. This summary is great for users who do not want to go through the entire p\pp but still want to get a general idea of the information contained in the \pp. Furthermore, the logo of TRUSTe\footnote{TRUSTe is a global data privacy management solutions provider, part of whose mission is to ensure that digital businesses comply with international privacy requirements \cite{truste}.} EU Safe Harbor and a link to the TRUSTe ``Click to Verify" page is displayed at the top of the \pp web page. This TRUSTe website seal verifies that LinkedIn's privacy practices comply with TRUSTe's standards \cite{truste}.
+
 Additionally, there are a few sections which we consider to be specific to a particular website category. In the case of LinkedIn, this is Section 4 ``Your obligations", which outlines the guidelines users on the social network need to abide to in order to maintain a valid account \cite{linkedin}. CNN includes three extra sections that are notably related to the fact that this is a news site belonging to a larger broadcasting corporation, namely ``Ad Choices", ``Turner's Participation in the Industry Self Regulatory Program for Interest Based Ads; Additional Choice Options", and ``International Transfer" \cite{cnn}. These sections mainly discuss additional practices of the broader Turner Network. Similarly to LinkedIn, Amazon's privacy policy also includes a ``Conditions of Use, Notices, and Revisions" section, in which the website not only advises users to check regularly for changes to the policy but also refers users to Amazon's ``Conditions of Use" web page and other informative pages \cite{amazon}.
 
-In the end, we can say that LinkedIn's meticulously written privacy policy is the most informative for various kinds of users. Their privacy summary is an incredibly helpful tool, especially for those users who want to be informed about what their social network is doing with respect to their data and privacy, but do not or cannot take the time to read through the entire document. In addition, the fact that LinkedIn also includes a separate Cookie Policy shows that they put the time into creating documents that would fully inform their users.
+At this stage of the case study, it became clear to us that we needed more than just to examine the sections covered in the \pps. Thus, the fourth phase of was to investigate the language used in select sections of the \pps. We decided to focus on the ``Cookies", and the ``Security" sections of the policies of the three websites.
+
+One intriguing feature to examine in the ``Cookies" sections is the definition of \textit{cookie} that the websites present in their \pps. Table \ref{tab:cookie-defs} summarizes the definitions found in \cite{amazon,linkedin,cnn}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{The definitions of \textit{cookie} in the \pps of our three studied websites.}
+    \begin{tabular}{|c|p{6.5cm}|}
+    \hline
+    \textbf{Website} & \textbf{Definition} \\    
+     \hline
+     LinkedIn &  A cookie is a tiny data file that resides on your computer, mobile phone, or other device, and allows us to recognize you as a User when you return to the LinkedIn website using the same computer and web browser. \\
+     \hline
+     CNN & Cookies are text files placed in your computer's browser to store your preferences. Cookies do not contain personally identifiable information; however, once you choose to furnish a site with personally identifiable information, this information may be linked to the data stored in the cookie. \\
+\hline
+     Amazon & Cookies are unique identifiers that we transfer to your device to enable our systems to recognize your device and to provide features such as 1-Click purchasing, Recommended for You, personalized advertisements on other Web sites (e.g., Amazon Associates with content served by Amazon.com and Web sites using Checkout by Amazon payment service), and storage of items in your Shopping Cart between visits.  \\
+     \hline
+    \end{tabular}%
+  \label{tab:cookie-defs}%
+\end{table}%
+
+One can see that the definitions of \textit{cookie} are driven by each website's primary usage of cookies. Both LinkedIn and Amazon state that the main purpose of cookies is to remember a user that has once visited the website before. One the other hand, CNN simply seems to use cookies for personalization purposes, so that is the definition they offer. It is also interesting to see that the cookie itself is described in three different ways: as a ``tiny data file", as a ``text file", and also as a ``unique identifier". This, for instance, is an indication that uniformity across all websites would be useful to avoid any kind of confusion among laypeople. 
+
+The other section we investigated in more detail was the ``Security" section of all the \pps. Amazon and LinkedIn mention SSL encryption directly \cite{amazon,linkedin}, while CNN is very vague and simply states: ``We have put in place appropriate physical, electronic, and managerial procedures to safeguard and help prevent unauthorized access, to maintain data security, and to use correctly the information we collect online” \cite{cnn}. It is unclear whether or not CNN even uses any kind of encryption at all, although due to the nature of the website, it is possible that this site may not require the encryption of any information. We did not study the extent to which this may be true. However, by simply clicking on the ``Log in" link, it does not seem as if this page is transmitted via HTTPS. Nonetheless, it makes sense for the other two websites to use SSL encryption since their website categories by nature require users to input and submit much more sensitive data, such as credit card numbers, and other personal information. The other issue with CNN's language is the fact that it is overly non-technical, which may imply that the authors of the \pp may simply not have technical knowledge. This is another sign that it may be helpful for policymakers to receive some technical education, which would make \pps more uniform and informative.
+
+In the end, we can conclude based on the first three stages of our case study that LinkedIn's meticulously written privacy policy is the most useful for various kinds of users. Their privacy summary is an incredibly helpful tool, especially for those users who want to be informed about what their social network is doing with respect to their data and privacy, but do not or cannot take the time to read through the entire document. In addition, the fact that LinkedIn also includes a separate Cookie Policy shows that they put the time into creating documents that would fully inform their users. Another intriguing case study would be to compare LinkedIn's \pp with that of other social networks to see if our conclusion about \pps of social networks holds. 
+
+The lessons learned in the last stage of our case study are two-fold: (1) \pps are clearly tailored to each of the studied website's main purposes and goals, and (2) more consistency is required in the \pps across website categories to avoid confusion. While we agree that \pps need to reflect a website's purpose and goals, we also argue that the extent of the discrepancies, particularly in the sections studied, may call for more uniformity across \pps, and indicates the potential need for more communication between policymakers and the technology community. Nevertheless, we these lessons are drawn in limited premises due to time contraints, and we suggest that stage four of our case study be carried out in more deatil, potentially as its own case study in the future.
+
+We hope that our analysis of the \pps of the three websites chosen for our case study will serve as a starting point for further conversation on the creation of \pps and privacy standards.
 
 \section{Conclusions and Future Work}
 

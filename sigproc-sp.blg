@@ -9,5 +9,7 @@ Warning--entry type for "cnn" isn't style-file defined
 --line 17 of file sigproc.bib
 Warning--entry type for "announcing_sdk" isn't style-file defined
 --line 33 of file sigproc.bib
+Warning--entry type for "truste" isn't style-file defined
+--line 41 of file sigproc.bib
 Warning--empty journal in FLASH_COOKIES
-(There were 5 warnings)
+(There were 6 warnings)
