@@ -95,14 +95,6 @@ Marcela Melara, Christian Eubank and Diego Perez Botero \\
 
 \maketitle
 
-<<<<<<< Updated upstream
-\category{H.3.5}{Information Systems}{Information Storage and Retrieval}[Web-based services]
-\category{K.4.1}{Computing Milieux}{Computers and Society}[Privacy]
-
-=======
->>>>>>> Stashed changes
-\terms{Documentation, Measurement, Security}
-
 \keywords{FourthParty, Web crawling, cookies, privacy policy, mobile}
 
 \section{Introduction}
@@ -117,7 +109,7 @@ Our project adopts the methodology of FourthParty, a dynamic web measurement pla
 
 In the realm of mobile web crawling, \cite{timmins} studies content of over one-million mobile international Web pages using a search-assisted crawling methodology to locate and study pages for three of the most popular mobile Web formats - WML 1.0, WML 2.0/XHTML mobile profile (XHTML-MP) and compact HTML (C-HTML). While they look at the relative characteristics of these mobile Web content formats, as well as compare them with a similar sampling of non-mobile (HTML) content \cite{timmins}, the main difference between this project and \fpm is that they do not look at the dynamic content, such as Javascript and cookies, of their crawled web pages. 
 
-For our analysis of our results of our \fpm web crawls, we refer to \cite{FLASH_COOKIES,soltani}, who found that popular websites were using ``Flash cookies" as a means of persistent tracking of users, and that many sites were also using Falsh technology to reinstantiate HTTP cookies deleted by a user, a process called ``respawning", making tracking more resistant to users’ privacy-seeking behaviors. In addition, in \cite{FLASH_COOKIES}, they also examine HTML5 local storage and Cache-Cookies via ETags as a new tracking vector.
+For our analysis of our results of our \fpm web crawls, we refer to \cite{FLASH_COOKIES,soltani}, who found that popular websites were using ``Flash cookies" as a means of persistent tracking of users, and that many sites were also using Falsh technology to reinstantiate HTTP cookies deleted by a user, a process called ``respawning", making tracking more resistant to users' privacy-seeking behaviors. In addition, in \cite{FLASH_COOKIES}, they also examine HTML5 local storage and Cache-Cookies via ETags as a new tracking vector.
 
 \section{Implementation}
 This section explains the design decisions and the software development process that the FourthPartyMobile project entailed.
@@ -187,7 +179,7 @@ We crawled two URL datasets parsed from \emph{Alexa - Top Sites in United States
 \subsection{Devices}
 
 All crawls were conducted between January 7, 2013 and January 10, 2013. Six different devices were used to go through the two URL datasets, for a total of 12 result sets. We used one PC, one smartphone and two tablets, as well as an emulated smartphone and an emulated tablet:
-
+\vspace{-1em}
 \begin{itemize}\itemsep0em 
 \item Desktop (Ubuntu 12.04, Firefox 11.0)
 
@@ -229,7 +221,7 @@ In determining the sites with the most prevalent tracking habits, we first consi
 As recorded in Table~\ref{tab:major_cookies}, roughly one third of the top cookie-adders were ranked highly across all three types of devices. Differences in the top cookie-adders across the three devices were partially a relic of third-party websites that added cookies heavily on one platform, but not the others. Interestingly, tablets appeared to lie in between phones and computers in terms of top advertising/analytics cookie-adders. Specifically, among others, the tablet shared \texttt{2o7.net} and \texttt{collective-media.net} with phones and \texttt{dotomi.com} and \texttt{rfihub.com} with desktops. In contrast, phones and desktops did not share a top analytics/advertiser in their top 25 that did not also appear in the top 25 for tablets.
 
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie-adding websites in top 25 for all devices}
     \begin{tabular}{|c|c|c|c|}
@@ -254,7 +246,7 @@ Websites in the top 25 for containing JavaScript calls by other websites for all
 
 Overall, based on our cookie and JavaScript analysis, news media and online retailers appear to be the most pervasive first-party trackers while third-party advertisers and analytics groups have a notable presence on all three types of devices.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Websites in Top 25 for all devices for containing JS referring to other sites}
     \begin{tabular}{|c|c|c|c|}
@@ -278,7 +270,7 @@ As when examining the major players in tracking, we compared desktop and mobile 
 Another basic way to categorize cookies' longevities is by their expiration time: some are evicted from the browser's memory after a finite amount of time, while others are meant to stay in the browser's memory permanently. Permanent cookies are set by Mozilla Firefox to expire after exactly 9.223372036854776 * $10^{18}$ milliseconds; temporary cookies have eviction times that are more manageable (e.g. 11 days). The results of examining the expiration dates are contained in Table~\ref{tab:dm_cookie_longeivity}. Note that, as with short-term cookie stickiness, the proportion of permanent cookies increases as devices become more mobile.
 
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Desktop v. mobile cookie action counts with Top 100 dataset}
     \begin{tabular}{|c|c|c|c|c|}
@@ -292,7 +284,7 @@ Another basic way to categorize cookies' longevities is by their expiration time
   \label{tab:dm_cookie_counts_100}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Desktop v. mobile cookie action counts with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|c|}
@@ -306,7 +298,7 @@ Another basic way to categorize cookies' longevities is by their expiration time
   \label{tab:dm_cookie_counts_500}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Desktop v. mobile cookie longevity with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|c|}
@@ -323,7 +315,7 @@ Another basic way to categorize cookies' longevities is by their expiration time
 Next, we turn to the number of JavaScript calls, including the third-party JavaScript calls. We define third-party JavaScript calls as in the previous section. Observe, in Tables~\ref{tab:dm_javascript_100} and~\ref{tab:dm_javascript_500} that the raw number of JavaScript calls as well as the proportion of calls by third-party entities fall from desktop to tablet to mobile phone. This suggests, from a tracking point of view, that JavaScript is increasingly used for purposes more in accordance with site mechanics (e.g. rendering) as opposed to tracking as devices move in the mobile direction. This could be a relic of the fact that, since these mobile devices lack the same computing power as desktops, adding extra JavaScript for purposes other than running the first-party content would slow browsing down to an unacceptable degree. Hence, one could hypothesize that, in general, trackers will use cookies (which do not require significant computational power) more frequently when compared to JavaScript on mobile devices.
 
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{JavaScript call counts with Top 100 dataset}
     \begin{tabular}{|c|c|c|c|}
@@ -337,7 +329,7 @@ Next, we turn to the number of JavaScript calls, including the third-party JavaS
   \label{tab:dm_javascript_100}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{JavaScript call counts with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|}
@@ -425,7 +417,7 @@ There are three possible actions that can be taken when it comes to cookies: cre
 
 Both datasets show the aforementioned trends, which are quantified in Table \ref{tab:cookie_deltas}, where the differences between the emulated and expected (physical) results are presented. In the case of tablets, the two physical devices were averaged and taken as the expected result. We found that the emulated phone only distanced itself from the real phone by 16.67\% or less in terms of the cookie action counts. The emulated tablet showed lower fidelity, being off by 55.73\% in some cases.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie action counts with Top 100 dataset}
     \begin{tabular}{|c|c|c|c|}
@@ -441,7 +433,7 @@ Both datasets show the aforementioned trends, which are quantified in Table \ref
   \label{tab:cookie_counts_100}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie action counts with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|}
@@ -457,7 +449,7 @@ Both datasets show the aforementioned trends, which are quantified in Table \ref
   \label{tab:cookie_counts_500}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Emulated vs Physical deltas in terms of cookie action counts}
     \begin{tabular}{|c|c|c|c|c|}
@@ -477,7 +469,7 @@ Both datasets show the aforementioned trends, which are quantified in Table \ref
 Besides having the same amount of cookie events as a physical device, it is important that an emulated device is exposed to cookies of similar nature. As explained in Section \ref{sec:desktop_vs_mobile}, a basic way to categorize cookies is by their expiration time. Table \ref{tab:cookie_longevity} gives the total count of permanent and temporary cookies found in crawls with the Top 500 dataset, as well as their relative proportions. Once more, the Emulated Nexus S mirrors the HTC Evo 4G's behavior fairly closely. To our surprise, the counts and nature of cookies reported by the Emulated Nexus 7 are almost the same as those of the Emulated Nexus S. As a result, the Emulated Nexus 7 is not a good replacement for either of the tablets under this criteria. Referring back to Table \ref{tab:cookie_counts_500}, we soon realized that the Emulated Nexus 7 has consistently been acting more like a phone than as a tablet when it comes to cookies.
 
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie longevity with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|c|}
@@ -497,7 +489,7 @@ Now that we analyzed cookies by their counts and their longevity, we can dig dee
 
 Table \ref{tab:cookie_sizes} gives the average size of the cookies detected during the Top 500 crawls by the different mobile devices. Note that tablets reported a larger cookie size on average than phones. To improve our understanding of the cookie size distributions for the two platforms, we used 2R Soft\footnote{http://www.2rsoft.tk} to run a single-series analysis over the cookies associated with each crawl and used goodness-of-fit tests to select the best cumulative density function (CDF) fit. An exponential distribution gave the best Anderson-Darling statistic in all cases, with the parameters given in Table \ref{tab:cookie_sizes}. We plotted the five CDFs and obtained Figure \ref{fig:cookie_cdf}. Tablet crawls are represented with dotted lines and phone crawls are shown as solid lines. From the CDF curves, it is clear that the Emulated Phone (Nexus S) serves as a convincing approximation to the Physical Phone (HTC Evo 4G). Meanwhile, the Emulated Tablet (Nexus 7) remains closer to the phone crawls than to the real tablet crawls. Also, it should be noted that the two physical tablets (Asus TF300T and Samsung Galaxy Tab 2) show cookie sizes that tend to be larger than the ones registered in phones.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie size distribution with Top 500 dataset}
     \begin{tabular}{|c|c|c|}
@@ -521,7 +513,7 @@ Tables \ref{tab:http_100} and \ref{tab:http_500} show the counts of the various 
 
 Table \ref{tab:http_diffs} summarizes the difference between the emulated and expected (physical) results. In the case of tablets, the two physical devices were averaged and taken as the expected result. Similar to what was seen with cookies, the emulated phone does not deviate considerably from our reference physical phone, with deltas of less than 8.33\% in all counts. While the behavior of the emulated tablet was unexpectedly close to what we desired with the Top 100 dataset, the larger dataset brought about deltas of around 20\% on all counts, which might be unacceptable. This would explain why, as discussed in the previous subsection, the emulated tablet did not behave the same way as the physical tablets in terms of cookie activity. After all, it appears that the emulated tablet did not receive the same web content that the physical tablets received.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{HTTP Responses by content type, Top 100 dataset}
     \begin{tabular}{|c|c|c|c|c|c|}
@@ -537,7 +529,7 @@ Table \ref{tab:http_diffs} summarizes the difference between the emulated and ex
   \label{tab:http_100}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{HTTP Responses by content type, Top 500 dataset}
     \begin{tabular}{|c|c|c|c|c|c|}
@@ -554,7 +546,7 @@ Table \ref{tab:http_diffs} summarizes the difference between the emulated and ex
   \label{tab:http_500}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Emulated vs Physical deltas in terms of HTTP response content types}
     \begin{tabular}{|c|c|c|c|c|c|}
@@ -613,7 +605,7 @@ The easiest and quickest way to determine if the contents of the policies differ
 
 Our next point of study was the length of each of the privacy policies as this is an indicator of the amount of detail the websites offer their visitors. Running the \texttt{wc -w} command on each website's policy. The the resulting word counts are summarized in Table \ref{tab:wc}.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Word counts of the privacy policies of our three studied websites.}
     \begin{tabular}{|c|c|}
@@ -655,7 +647,7 @@ At this stage of the case study, it became clear to us that we needed more than 
 
 One intriguing feature to examine in the ``Cookies" sections is the definition of \textit{cookie} that the websites present in their \pps. Table \ref{tab:cookie-defs} summarizes the definitions found in \cite{amazon,linkedin,cnn}.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{The definitions of \textit{cookie} in the \pps of our three studied websites.}
     \begin{tabular}{|c|p{6.5cm}|}
@@ -682,6 +674,7 @@ The lessons learned in the last stage of our case study are two-fold: (1) \pps a
 
 We hope that our analysis of the \pps of the three websites chosen for our case study will serve as a starting point for further conversation on the creation of \pps and privacy standards.
 
+\newpage
 \section{Conclusions and Future Work}
 
 By porting the FourthParty engine to mobile platforms, we have enabled future researchers to more accurately and more easily compare online tracking habits across devices. While we found that for this purpose emulated phones offer a reasonable approximation of the browsing experience, emulated tablets may provide erroneous results. We hope that researchers can leverage FourthPartyMobile to avoid this pitfall and will now view our mobile tracking analysis tool as easy-to-use as the original FourthParty for desktop. In terms of results, we found that the more mobile devices tended to use cookies with longer degrees of longevity, used cookies more heavily than JavaScript in general and had a smaller proportion of their JavaScript calls made for third-party sites.

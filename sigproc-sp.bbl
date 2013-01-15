@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{amazon}
 {A}mazon.com {I}nc.
@@ -8,35 +7,6 @@
 \bibitem{supercookies}
 J.~Angwin.
 \newblock Latest in web tracking: Stealthy 'supercookies'.
-
-\bibitem{FLASH_COOKIES}
-M.~Ayenson, D.~J. Wambach, A.~Soltani, N.~Good, and C.~J. Hoofnagle.
-\newblock Flash cookies and privacy ii: Now with html5 and etag respawning.
-\newblock July 2011.
-
-\bibitem{linkedin}
-{L}inked{I}n {C}orporation.
-\newblock {P}rivacy {P}olicy, Jun 2011.
-
-\bibitem{announcing_sdk}
-D.~Mason.
-\newblock Announcing add-on sdk 1.5!, Feb 2012.
-
-\bibitem{truste}
-{T}{R}{U}{S}{T}e.
-\newblock {O}nline privacy services - {O}nline trust and safety.
-
-\bibitem{cnn}
-{T}urner {B}roadcasting~{S}ystem {I}nc.
-\newblock {C}{N}{N} {P}rivacy {S}tatement, Feb 2011.
-
-\end{thebibliography}
-=======
-\begin{thebibliography}{1}
-
-\bibitem{amazon}
-{A}mazon.com {I}nc.
-\newblock {A}mazon.com {P}rivacy {N}otice, Apr 2012.
 
 \bibitem{FLASH_COOKIES}
 M.~Ayenson, D.~J. Wambach, A.~Soltani, N.~Good, and C.~J. Hoofnagle.
@@ -71,11 +41,10 @@ P.~Timmins, S.~McCormick, E.~Agu, and C.~Wills.
 
 \bibitem{truste}
 {T}{R}{U}{S}{T}e.
-\newblock {O}nline privacy services - {O}nline trust and saftey.
+\newblock {O}nline privacy services - {O}nline trust and safety.
 
 \bibitem{cnn}
 {T}urner {B}roadcasting~{S}ystem {I}nc.
 \newblock {C}{N}{N} {P}rivacy {S}tatement, Feb 2011.
 
 \end{thebibliography}
->>>>>>> Stashed changes
