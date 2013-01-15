@@ -44,6 +44,7 @@ escapeinside={\%*}{*)}          % if you want to add a comment within your code
 % Marmar got really tired of typing privacy policy/policies, so \newcommand please
 \newcommand{\pp}{privacy policy}
 \newcommand{\pps}{privacy policies}
+\newcommand{\fpm}{FourthPartyMobile}
 
 \title{COS 597D Project - Mobile vs Traditional Web Tracking\\(FourthPartyMobile)}
 %
@@ -94,12 +95,15 @@ Marcela Melara, Christian Eubank and Diego Perez Botero \\
 
 \maketitle
 
+<<<<<<< Updated upstream
 \category{H.3.5}{Information Systems}{Information Storage and Retrieval}[Web-based services]
 \category{K.4.1}{Computing Milieux}{Computers and Society}[Privacy]
 
+=======
+>>>>>>> Stashed changes
 \terms{Documentation, Measurement, Security}
 
-\keywords{FourthParty, Web crawling, cookies, privacy policy, ...}
+\keywords{FourthParty, Web crawling, cookies, privacy policy, mobile}
 
 \section{Introduction}
 We wish to automate the detection of third-party tracking mechanisms while browsing the web on a mobile device. To this end, we will adopt the FourthParty\footnote{http://www.fourthparty.info} project's approach and instrument a popular open-source mobile browser (i.e. Firefox) to be used as an enhanced web crawler. This enables us to log realistic end-user interactions (e.g. execution of embedded scripts) as opposed to just downloading each web page's static content, which is what traditional web crawlers do.
@@ -107,7 +111,13 @@ We wish to automate the detection of third-party tracking mechanisms while brows
 The mobile web crawler is the tool that we will use to collect valuable information in order to conduct our comparison between the Mobile and Traditional third-party tracking ecosystems and their practices. We will also analyze our obtained data to characterize the behavior of emulated mobile devices and assess the extend to which they can be employed as a substitute for physical devices when carrying out web privacy research. Lastly, to help contextualize the empirical part of this project, we provide a case study on privacy policies and how they relate to the web tracking mechanisms that we see in practice.
 
 \section{Related Work}
-MARCELA
+There have been several other projects which share some but not all characteristics with \fpm.
+
+Our project adopts the methodology of FourthParty, a dynamic web measurement platform used to collect information about real-time end-user interactions \cite{mayer}. With the gathered data, the authors are able to study information leakage, tracking technologies and blocking tool effectiveness \cite{mayer}. Nevertheless, FourthParty was designed to just be run in browsers on desktop devices, but because of the differences between desktop and mobile platforms, we needed to port the FourthParty code to support web crawling on mobile devices as well for our purposes.
+
+In the realm of mobile web crawling, \cite{timmins} studies content of over one-million mobile international Web pages using a search-assisted crawling methodology to locate and study pages for three of the most popular mobile Web formats - WML 1.0, WML 2.0/XHTML mobile profile (XHTML-MP) and compact HTML (C-HTML). While they look at the relative characteristics of these mobile Web content formats, as well as compare them with a similar sampling of non-mobile (HTML) content \cite{timmins}, the main difference between this project and \fpm is that they do not look at the dynamic content, such as Javascript and cookies, of their crawled web pages. 
+
+For our analysis of our results of our \fpm web crawls, we refer to \cite{FLASH_COOKIES,soltani}, who found that popular websites were using ``Flash cookies" as a means of persistent tracking of users, and that many sites were also using Falsh technology to reinstantiate HTTP cookies deleted by a user, a process called ``respawning", making tracking more resistant to users’ privacy-seeking behaviors. In addition, in \cite{FLASH_COOKIES}, they also examine HTML5 local storage and Cache-Cookies via ETags as a new tracking vector.
 
 \section{Implementation}
 This section explains the design decisions and the software development process that the FourthPartyMobile project entailed.
@@ -137,8 +147,6 @@ FourthPartyMobile's architecture (see Figure \ref{fig:component_diagram}) delega
 \caption{Prototype's Runtime Interactions.}
 \label{fig:component_diagram}
 \end{figure}
-
-
 
 \subsection{Prototype}
 We took advantage of the fact that the FourthParty\footnote{http://www.fourthparty.info} project is open-source. After analyzing its codebase, we ported its core functionality over to support Android-based mobile devices, such as smartphones and tablets. FourthPartyMobile is implemented in Java and JavaScript, leveraging both the Android SDK and the Mozilla Add-On SDK. Persistent storage is fully compliant with FourthParty's SQLite database schema. Thus, we provide a standardized representation for traditional and mobile crawls, which facilitates data analysis. Our Crawling Backend is written in java with a SQLite JDBC library that supports Mac OS, Linux and Windows, so it should be fully multi-platform. It also supports concurrency, so multiple crawls can be recorded simultaneously. 
@@ -601,7 +609,7 @@ The case study has four stages, each stage looking at the privacy policies in mo
 
 The question we wanted to answer in our case study was \emph{Do privacy policies vary between normal web and mobile web?} Thus, the first stage of the case study, seeks to answer this question via a very simple method. We visited the three websites on our three platforms and downloaded the presented privacy policies for each site on each platform. This gave us three privacy policies each for LinkedIn, CNN, and Amazon. 
 
-The easiest and quickest way to determine if the contents of the policies differ for a single website was to run the \texttt{diff} command between the policies collected for each pair of platforms\footnote{The policies were all saved as text documents, and stripped of tabs and empty lines via a python script.}: desktop - smartphone, desktop - tablet, and tablet - smartphone. Taking the more pessimistic standpoint, we were expecting to find that a single website's policies would differ more between the three platforms. But what we discovered in reality is that in the cases of LinkedIn and CNN, the privacy policies for all three platforms are exactly identical. \textbf{keep this}We consider this to be a positive finding as this proves that the websites make an effort to maintain consistency across the devices.\textbf{??} In the case of Amazon, the privacy policies presented when visiting the website through a desktop and a tablet are exactly identical. However, the smartphone version of the policy is much shorter and refers the reader to the full (desktop) version of their privacy notice. We would like to note that the fact that the privacy policies were basically all identical for each of the three websites in our case study greatly facilitated our further analysis of the privacy policies. The remaining examinations discussed in this section were done using the desktop version of the policies.
+The easiest and quickest way to determine if the contents of the policies differ for a single website was to run the \texttt{diff} command between the policies collected for each pair of platforms\footnote{The policies were all saved as text documents, and stripped of tabs and empty lines via a python script.}: desktop - smartphone, desktop - tablet, and tablet - smartphone. Taking the more pessimistic standpoint, we were expecting to find that a single website's policies would differ more between the three platforms. But what we discovered in reality is that in the cases of LinkedIn and CNN, the privacy policies for all three platforms are exactly identical. We consider this to be a negative finding as this proves that the websites are not aware of the differences between the users' capabilities on each different platform. In the case of Amazon, the privacy policies presented when visiting the website through a desktop and a tablet are exactly identical. However, the smartphone version of the policy is much shorter and refers the reader to the full (desktop) version of their privacy notice. We would like to note that the fact that the privacy policies were basically all identical for each of the three websites in our case study greatly facilitated our further analysis of the privacy policies. The remaining examinations discussed in this section were done using the desktop version of the policies.
 
 Our next point of study was the length of each of the privacy policies as this is an indicator of the amount of detail the websites offer their visitors. Running the \texttt{wc -w} command on each website's policy. The the resulting word counts are summarized in Table \ref{tab:wc}.
 
