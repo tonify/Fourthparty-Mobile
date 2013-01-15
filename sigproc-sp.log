@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 12:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 15:31
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -404,12 +404,6 @@ Overfull \hbox (9.55438pt too wide) in paragraph at lines 138--139
  [][] 
  []
 
-
-Overfull \hbox (6.07394pt too wide) in paragraph at lines 153--154
-[]\T1/aer/bx/n/9 Support In-fras-truc-ture\T1/aer/m/n/9 : the sup-port server a
-nd other
- []
-
 <diagrams/db_diagram.png, id=12, 745.28438pt x 353.82187pt>
 File: diagrams/db_diagram.png Graphic file (type png)
 
@@ -470,10 +464,13 @@ Overfull \hbox (12.49211pt too wide) in paragraph at lines 290--299
  [][][] 
  []
 
-[4]
+
 Overfull \hbox (4.2027pt too wide) in paragraph at lines 321--330
  [][][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Overfull \hbox (4.2027pt too wide) in paragraph at lines 335--344
@@ -483,9 +480,13 @@ Overfull \hbox (4.2027pt too wide) in paragraph at lines 335--344
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[4]
 
-Overfull \hbox (4.88603pt too wide) in paragraph at lines 388--389
-[]\T1/aer/bx/n/9 Developer-Friendly\T1/aer/m/n/9 : em-u-lated de-vices are com-
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (7.06401pt too wide) in paragraph at lines 388--389
+[]\T1/aer/bx/n/9 Developer-Friendly\T1/aer/m/n/9 : Em-u-lated de-vices are com-
 pletely
  []
 
@@ -511,10 +512,17 @@ Overfull \hbox (22.2932pt too wide) in paragraph at lines 475--486
  [][][] 
  []
 
-[6]
+
 Overfull \hbox (6.5835pt too wide) in paragraph at lines 495--506
  [][][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -588,20 +596,20 @@ f.png>] <at-a-glance.png, id=44, 451.08525pt x 436.029pt>
 File: at-a-glance.png Graphic file (type png)
 
 <use at-a-glance.png>
-Package pdftex.def Info: at-a-glance.png used on input line 629.
+Package pdftex.def Info: at-a-glance.png used on input line 630.
 (pdftex.def)             Requested size: 252.0pt x 243.58908pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 629--630
+Overfull \hbox (12.0pt too wide) in paragraph at lines 630--631
  [][] 
  []
 
 [9]
-Underfull \hbox (badness 1221) in paragraph at lines 659--660
+Underfull \hbox (badness 1221) in paragraph at lines 661--662
 \T1/aer/m/n/9 puter's browser to store your pref-er-ences.
  []
 
 
-Overfull \hbox (3.60434pt too wide) in paragraph at lines 653--665
+Overfull \hbox (3.60434pt too wide) in paragraph at lines 655--667
  [][][] 
  []
 
@@ -611,7 +619,7 @@ Overfull \hbox (3.60434pt too wide) in paragraph at lines 653--665
 Here is how much of TeX's memory you used:
  6447 strings out of 494045
  91036 string characters out of 3145963
- 191912 words of memory out of 3000000
+ 193912 words of memory out of 3000000
  9597 multiletter control sequences out of 15000+200000
  49938 words of font info for 69 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -628,7 +636,7 @@ nts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sigproc-sp.pdf (11 pages, 362556 bytes).
+Output written on sigproc-sp.pdf (11 pages, 361938 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
