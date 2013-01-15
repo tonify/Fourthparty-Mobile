@@ -11,5 +11,12 @@ Warning--entry type for "announcing_sdk" isn't style-file defined
 --line 33 of file sigproc.bib
 Warning--entry type for "truste" isn't style-file defined
 --line 41 of file sigproc.bib
+Warning--entry type for "supercookies" isn't style-file defined
+--line 48 of file sigproc.bib
+Illegal end of database file---line 52 of file sigproc.bib
+ : }
+ :  
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in supercookies
 Warning--empty journal in FLASH_COOKIES
-(There were 6 warnings)
+(There was 1 error message)

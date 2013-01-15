@@ -94,10 +94,6 @@ Marcela Melara, Christian Eubank and Diego Perez Botero \\
 
 \maketitle
 
-\begin{abstract}
-INSERT ABSTRACT HERE??
-\end{abstract}
-
 \category{H.3.5}{Information Systems}{Information Storage and Retrieval}[Web-based services]
 \category{K.4.1}{Computing Milieux}{Computers and Society}[Privacy]
 
@@ -267,6 +263,7 @@ Overall, based on our cookie and JavaScript analysis, news media and online reta
 \end{table}%
 
 \subsection{Desktop vs Mobile Tracking}
+\label{sec:desktop_vs_mobile}
 
 As when examining the major players in tracking, we compared desktop and mobile devices with respect to an investigation of the cookies and JavaScript calls observed during the crawls. Tables~\ref{tab:dm_cookie_counts_100} and~\ref{tab:dm_cookie_counts_500} contain the raw number of cookie-related calls for the devices. Unsurprisingly, as the devices became smaller and more mobile, the number of cookies added during the crawls decreased, likely due to space constraints. However, when considering the proportion of cookies left on a device after the crawls, cookies appear to be stickier in the short term on the more mobile devices. This result is likely due to the fact that, since trackers can add a smaller number of cookies on a mobile device, they try to keep the few cookies they place on the device as long as possible.
 
@@ -469,7 +466,7 @@ Both datasets show the aforementioned trends, which are quantified in Table \ref
 \end{table}%
 
 
-Besides having the same amount of cookie events as a physical device, it is important that an emulated device is exposed to cookies of similar nature. A basic way to categorize cookies is by their expiration time: some are evicted from the browser's memory after a finite amount of time, while others are meant to stay in the browser's memory permanently. Permanent cookies are set by Mozilla Firefox to expire after exactly $9.223372036854776*10^{18}$ milliseconds; temporary cookies have eviction times that are more manageable (e.g. 11 days). Table \ref{tab:cookie_longevity} gives the total count of permanent and temporary cookies found in crawls with the Top 500 dataset, as well as their relative proportions. Once more, the Emulated Nexus S mirrors the HTC Evo 4G's behavior fairly closely. To our surprise, the counts and nature of cookies reported by the Emulated Nexus 7 are almost the same as those of the Emulated Nexus S. As a result, the Emulated Nexus 7 is not a good replacement for either of the tablets under this criteria. Referring back to Table \ref{tab:cookie_counts_500}, we soon realized that the Emulated Nexus 7 has consistently been acting more like a phone than as a tablet when it comes to cookies.
+Besides having the same amount of cookie events as a physical device, it is important that an emulated device is exposed to cookies of similar nature. As explained in Section \ref{sec:desktop_vs_mobile}, a basic way to categorize cookies is by their expiration time. Table \ref{tab:cookie_longevity} gives the total count of permanent and temporary cookies found in crawls with the Top 500 dataset, as well as their relative proportions. Once more, the Emulated Nexus S mirrors the HTC Evo 4G's behavior fairly closely. To our surprise, the counts and nature of cookies reported by the Emulated Nexus 7 are almost the same as those of the Emulated Nexus S. As a result, the Emulated Nexus 7 is not a good replacement for either of the tablets under this criteria. Referring back to Table \ref{tab:cookie_counts_500}, we soon realized that the Emulated Nexus 7 has consistently been acting more like a phone than as a tablet when it comes to cookies.
 
 
 \begin{table}[htbp]
@@ -679,7 +676,9 @@ We hope that our analysis of the \pps of the three websites chosen for our case 
 
 \section{Conclusions and Future Work}
 
+FourthPartyMobile sets a good foundation for future privacy research in the area of mobile web tracking. While we gave a high-level view of the collected data in this paper, there is much more than can be analyzed with respect to the actual values of cookies, JavaScript calls and HTTP headers. An interesting contribution would be to train a classifier with third-party mobile cookies or third-party mobile JavaScript code from known advertisers, which can be easily obtained through the FourthParty SQLite database schema. The trained classifier could, in turn, be used to distinguish that type of content and could tell the browser to assign lower privilege levels to it.
 
+There are many other potential projects derived from our findings. For example, we have yet to explore other mobile platforms besides Android, such as iOS, Windows Phone and BlackBerry. In addition, we believe that the FourthParty SQLite database schema can be extended to support up-and-coming web tracking practices (e.g. stealthy \emph{supercookies}\cite{supercookies}).
 
 \nocite{*}
 \bibliographystyle{abbrv}
