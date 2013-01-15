@@ -266,14 +266,120 @@ Overall, based on our cookie and JavaScript analysis, news media and online reta
   \label{tab:major_js}%
 \end{table}%
 
-
-\subsection{Cookie/JavaScript Pervasiveness}
-CHRIS
-
-By website category (e.g. porn, news, etc) and by domain (e.g. com, net, etc)
-
 \subsection{Desktop vs Mobile Tracking}
-ALL OF US
+
+As when examining the major players in tracking, we compared desktop and mobile devices with respect to an investigation of the cookies and JavaScript calls observed during the crawls. Tables~\ref{tab:dm_cookie_counts_100} and~\ref{tab:dm_cookie_counts_500} contain the raw number of cookie-related calls for the devices. Unsurprisingly, as the devices became smaller and more mobile, the number of cookies added during the crawls decreased, likely due to space constraints. However, when considering the proportion of cookies left on a device after the crawls, cookies appear to be stickier in the short term on the more mobile devices. This result is likely due to the fact that, since trackers can add a smaller number of cookies on a mobile device, they try to keep the few cookies they place on the device as long as possible.
+
+Another basic way to categorize cookies' longevities is by their expiration time: some are evicted from the browser’s memory after a finite amount of time, while others are meant to stay in the browser’s memory permanently. Permanent cookies are set by Mozilla Firefox to expire after exactly 9.223372036854776 * $10^{18}$ milliseconds; temporary cookies have eviction times that are more manageable (e.g. 11 days). The results of examining the expiration dates are contained in Table~\ref{tab:dm_cookie_longeivity}. Note that, as with short-term cookie stickiness, the proportion of permanent cookies increases as devices become more mobile.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Desktop v. mobile cookie action counts with Top 100 dataset}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{4}{|c|}{\textbf{Cookies - Top 100 Dataset}} \\ \cline{2-5}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Added}} & \multicolumn{1}{|c|}{\textbf{Changed}} & \multicolumn{1}{|c|}{\textbf{Deleted}} & \multicolumn{1}{|c|}{\textbf{Pct. Remaining}}\\ \hline
+    \multicolumn{1}{|l|}{\textbf{Desktop}} & 1732   & 2605  & 148 & 91.45\% \\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg).}} & 1233.5  & 1922.5  & 107 & 91.32\%\\
+    \multicolumn{1}{|l|}{\textbf{Mobile}} & 936   & 1214  & 18 & 98.08\% \\ \hline
+    \end{tabular}%
+  \label{tab:dm_cookie_counts_100}%
+\end{table}%
+
+\begin{table}[htbp]
+  \centering
+  \caption{Desktop v. mobile cookie action counts with Top 500 dataset}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{4}{|c|}{\textbf{Cookies - Top 500 Dataset}} \\ \cline{2-5}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Added}} & \multicolumn{1}{|c|}{\textbf{Changed}} & \multicolumn{1}{|c|}{\textbf{Deleted}} & \multicolumn{1}{|c|}{\textbf{Pct. Remaining}}\\ \hline
+\multicolumn{1}{|l|}{\textbf{Desktop}} & 7355  & 13174  & 640 & 91.30\%\\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 5396.5  & 6845.5  & 262 & 95.15\%\\
+    \multicolumn{1}{|l|}{\textbf{Phone}} & 4387  & 4545  & 101 & 97.70\%\\ \hline
+    \end{tabular}%
+  \label{tab:dm_cookie_counts_500}%
+\end{table}%
+
+\begin{table}[htbp]
+  \centering
+  \caption{Desktop v. mobile cookie longevity with Top 500 dataset}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{4}{|c|}{\textbf{Cookies - Top 500 Dataset}} \\ \cline{2-5}
+    \multicolumn{1}{|c|}{} & \textbf{Perm.} & \textbf{Temp.} & \textbf{\% Perm.} & \textbf{Total} \\ \hline
+    \multicolumn{1}{|l|}{\textbf{Desktop}} & 4962  & 16527  & 23.09\% & 21489 \\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg).}} & 3571.5  & 8932.5  & 28.56\% & 12504 \\
+    \multicolumn{1}{|l|}{\textbf{Phone}}  & 2805  & 6228  & 31.05\% & 9033 \\  \hline
+    \end{tabular}%
+  \label{tab:dm_cookie_longeivity}%
+\end{table}%
+
+Next we turn to the number of JavaScript calls, including the third-party JavaScript calls. We define third-party JavaScript calls as in the previous section. Observe, in Tables~\ref{tab:dm_javascript_100} and~\ref{tab:dm_javascript_500} that the raw number of JavaScript calls as well as the proportion of calls by third-party entities fall from desktop to tablet to mobile phone. This suggests, from a tracking point of view, that JavaScript is increasingly used for purposes more in accordance with site mechanics (e.g. rendering) as opposed to tracking as devices move in the mobile direction. This could be a relic of the fact that since these mobile devices lack the same computing power as desktops adding additional JavaScript for purposes other than running the first-party content would slow browsing down to an unacceptable degree. Hence, one could hypothesize that, in general, trackers will use cookies (which do require significant computation power) more frequently when compared to JavaScript on mobile devices.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{JavaScript call counts with Top 100 dataset}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{JavaScript - Top 100 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Total Calls}} & \multicolumn{1}{|c|}{\textbf{3rd Party Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. 3rd Party Calls}}  \\ \hline
+    \multicolumn{1}{|l|}{\textbf{Desktop}} & 1763   & 1238  & 70.22\% \\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 1244.5   & 864 & 69.43\%  \\
+    \multicolumn{1}{|l|}{\textbf{Phone}} & 798  & 454  & 56.89\% \\ \hline
+    \end{tabular}%
+  \label{tab:dm_javascript_100}%
+\end{table}%
+
+\begin{table}[htbp]
+  \centering
+  \caption{JavaScript call counts with Top 500 dataset}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{JavaScript - Top 500 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Total Calls}} & \multicolumn{1}{|c|}{\textbf{3rd Party Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. 3rd Party Calls}} \\ \hline
+    \multicolumn{1}{|l|}{\textbf{Desktop}} & 10912   & 7310  & 66.99\% \\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 6165   & 3848  & 62.42\% \\
+    \multicolumn{1}{|l|}{\textbf{Phone}} & 4053  & 2344 & 57.83\%\\ \hline
+    \end{tabular}%
+  \label{tab:dm_javascript_500}%
+\end{table}%
+
+To test this hypothesis, in Table~\ref{tab:dm_cj_100} and Table~\ref{tab:dm_cj_500}, we compared the number of cookie calls against the number of JavaScript calls across the different devices. Here, we defined the number of cookie calls as the sum of the number of cookies added during the crawl plus the number of cookie changes. Observe that the proportion of cookie calls hovers in the high 60's and low 70's percentages. Similarly, notice that this proportion is slightly but noticeably higher for mobile phones when compared to tablets and tablets when compared to desktops.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cookie vs. JavaScript calls with Top 100 dataset}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{Top 100 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Cookie Calls}} & \multicolumn{1}{|c|}{\textbf{JavaScript Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. Cookie Calls}}  \\ \hline
+    \multicolumn{1}{|l|}{\textbf{Desktop}} & 4337  & 1763  & 71.10\% \\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 3156   & 1244.5 & 71.72\%  \\
+    \multicolumn{1}{|l|}{\textbf{Phone}} & 2150  & 798  & 72.94\% \\ \hline
+    \end{tabular}%
+  \label{tab:dm_cj_100}%
+\end{table}%
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cookie vs. JavaScript calls with Top 500 dataset}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{Top 500 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Cookie Calls}} & \multicolumn{1}{|c|}{\textbf{JavaScript Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. Cookie Calls}}  \\ \hline
+    \multicolumn{1}{|l|}{\textbf{Desktop}} & 20529  & 10912  & 65.29\% \\
+    \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 12242   & 6165 & 66.58\%  \\
+    \multicolumn{1}{|l|}{\textbf{Phone}} & 8932  & 4053  & 68.79\% \\ \hline
+    \end{tabular}%
+  \label{tab:dm_cj_500}%
+\end{table}%
+
+Overall, the raw number of cookie and JavaScript calls decrease as devices become more mobile, an extremely intuitive result simply due to the fact that mobile devices have greater hardware constraints. However, the tracking behavior across devices follows a less-obvious trend. Specifically, on mobile devices, cookies appear to be designed for a greater degree of longevity and JavaScript for analytics, and in general, appears to have a lesser role. This appears to represent a greater dependency on tracking through device memory rather than through processes that requires device computation. While a user will almost certainly notice slower browsing on an already comparatively-slow mobile device, he will likely not notice the corresponding increase in memory usage for tracking purposes.
+
+
 
 \subsection{Physical vs Emulated Devices}
 
