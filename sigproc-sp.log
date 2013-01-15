@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 00:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 00:28
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -279,9 +279,6 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen127
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
-Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
-
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
@@ -306,12 +303,9 @@ setbox \@tempboxa \hbox {\textbf {#1: #2}} \ifdim \wd \@tempboxa >\hsize \textb
 f {#1: #2}\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil }\par \fi .
 \c@ContinuedFloat=\count119
 Package caption Info: listings package is loaded.
-)
-\c@subfigure=\count120
-\c@subtable=\count121
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count122
+\c@float@type=\count120
 \float@exts=\toks37
 \float@box=\box32
 \@float@everytoks=\toks38
@@ -338,7 +332,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen134
 \enit@toks=\toks39
 \enit@inbox=\box34
-\enitdp@description=\count123
+\enitdp@description=\count121
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -374,19 +368,19 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count122
 \scratchdimen=\dimen135
 \scratchbox=\box35
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count123
+\nofMParguments=\count124
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count127
+\MPscratchCnt=\count125
 \MPscratchDim=\dimen136
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
 \everyMPtoPDFconversion=\toks41
 )
-\c@lstlisting=\count130
+\c@lstlisting=\count128
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -457,85 +451,101 @@ Package pdftex.def Info: diagrams/javascript_cdf.png used on input line 160.
  <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/component_diagr
 am.png (PNG copy)>] [2 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/di
 agrams/db_diagram.png (PNG copy)>]
-Overfull \hbox (4.88603pt too wide) in paragraph at lines 226--227
+LaTeX Font Info:    Try loading font information for T1+aett on input line 210.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+Overfull \hbox (15.46898pt too wide) in paragraph at lines 216--230
+ [][][] 
+ []
+
+
+Overfull \hbox (16.5677pt too wide) in paragraph at lines 241--252
+ [][][] 
+ []
+
+[3 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
+ng>]
+Overfull \hbox (4.88603pt too wide) in paragraph at lines 270--271
 []\T1/aer/bx/n/9 Developer-Friendly\T1/aer/m/n/9 : em-u-lated de-vices are com-
 pletely
  []
 
-[3 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
-ng>] [4 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascri
-pt_cdf.png>]
-Overfull \hbox (22.2932pt too wide) in paragraph at lines 300--311
+[4 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_cd
+f.png>]
+Overfull \hbox (22.2932pt too wide) in paragraph at lines 344--355
  [][][] 
  []
 
 
-Overfull \hbox (6.5835pt too wide) in paragraph at lines 320--331
+Overfull \hbox (6.5835pt too wide) in paragraph at lines 364--375
+ [][][] 
+ []
+
+[5]
+Overfull \hbox (19.11595pt too wide) in paragraph at lines 417--427
  [][][] 
  []
 
 
-Overfull \hbox (19.11595pt too wide) in paragraph at lines 373--383
+Underfull \hbox (badness 10000) in paragraph at lines 438--438
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 438--439
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 439--440
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--440
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 440--441
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 441--442
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--442
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 442--442
+[]$[]$| 
+ []
+
+
+Overfull \hbox (4.6653pt too wide) in paragraph at lines 434--445
  [][][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 394--395
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--395
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 395--396
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--396
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 396--397
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 397--398
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 398--398
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 398--398
-[]$[]$| 
- []
-
-
-Overfull \hbox (4.6653pt too wide) in paragraph at lines 390--401
- [][][] 
- []
-
-[5] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl)
-[6
+[6] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl)
+[7
 
 ] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux)
 
@@ -543,13 +553,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5985 strings out of 494045
- 86691 string characters out of 3145963
- 198808 words of memory out of 3000000
- 9141 multiletter control sequences out of 15000+200000
- 49450 words of font info for 67 fonts, out of 3000000 for 9000
+ 5952 strings out of 494045
+ 86172 string characters out of 3145963
+ 192912 words of memory out of 3000000
+ 9106 multiletter control sequences out of 15000+200000
+ 49938 words of font info for 69 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 42i,13n,41p,1269b,302s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,41p,1416b,302s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program File
@@ -557,13 +567,14 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on sigproc-sp.pdf (6 pages, 265906 bytes).
+ 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
+w/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on sigproc-sp.pdf (7 pages, 287321 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
