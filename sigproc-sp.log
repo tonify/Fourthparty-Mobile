@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 10:22
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 10:59
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -398,20 +398,22 @@ Overfull \hbox (7.2625pt too wide) in paragraph at lines 101--103
 File: diagrams/component_diagram.png Graphic file (type png)
 
 <use diagrams/component_diagram.png>
-Package pdftex.def Info: diagrams/component_diagram.png used on input line 143.
+Package pdftex.def Info: diagrams/component_diagram.png used on input line 140.
 
 (pdftex.def)             Requested size: 249.55438pt x 141.90346pt.
 
-Overfull \hbox (9.55438pt too wide) in paragraph at lines 143--144
+Overfull \hbox (9.55438pt too wide) in paragraph at lines 140--141
  [][] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/component_diagr
-am.png (PNG copy)>]
-Overfull \hbox (6.07394pt too wide) in paragraph at lines 160--161
+]
+Overfull \hbox (6.07394pt too wide) in paragraph at lines 157--158
 []\T1/aer/bx/n/9 Support In-fras-truc-ture\T1/aer/m/n/9 : the sup-port server a
 nd other
  []
@@ -420,36 +422,39 @@ nd other
 File: diagrams/db_diagram.png Graphic file (type png)
 
 <use diagrams/db_diagram.png>
-Package pdftex.def Info: diagrams/db_diagram.png used on input line 171.
+Package pdftex.def Info: diagrams/db_diagram.png used on input line 168.
 (pdftex.def)             Requested size: 521.69551pt x 247.67361pt.
 
-Overfull \hbox (17.69551pt too wide) in paragraph at lines 171--172
+Overfull \hbox (17.69551pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 [][]\T1/aer/m/n/9 https://quality.mozilla.org/browser-technologies/mobile-
  []
 
 
-Overfull \hbox (3.08502pt too wide) in paragraph at lines 178--179
+Overfull \hbox (3.08502pt too wide) in paragraph at lines 175--176
 \T1/aer/m/n/9 We tried au-tomat-ing crawls on Fire-fox Mo-bile with MozMill[],
  []
 
-
-Overfull \hbox (1.85838pt too wide) in paragraph at lines 209--210
+[2 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/component_dia
+gram.png (PNG copy)>]
+Overfull \hbox (1.85838pt too wide) in paragraph at lines 206--207
 []\T1/aer/m/n/9 Unfortunately, the mobile-enabled Mozilla Add-On SDK cur-
  []
 
-[2]
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 213.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 210.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\omsaer.fd"
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 213.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 210.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 LaTeX Font Info:    Try loading font information for T1+aett on input line 225.
 
 
@@ -460,11 +465,8 @@ Overfull \hbox (15.46898pt too wide) in paragraph at lines 231--245
  [][][] 
  []
 
-
-Underfull \vbox (badness 1478) has occurred while \output is active []
-
- [3 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/db_diagram.p
-ng (PNG copy)>]
+[3 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/db_diagram.pn
+g (PNG copy)>]
 Overfull \hbox (16.5677pt too wide) in paragraph at lines 256--267
  [][][] 
  []
@@ -495,40 +497,36 @@ Overfull \hbox (4.88603pt too wide) in paragraph at lines 391--392
 pletely
  []
 
-<diagrams/cookies_cdf.png, id=25, 1441.385pt x 765.86125pt>
+[5] <diagrams/cookies_cdf.png, id=28, 1441.385pt x 765.86125pt>
 File: diagrams/cookies_cdf.png Graphic file (type png)
 
 <use diagrams/cookies_cdf.png>
 Package pdftex.def Info: diagrams/cookies_cdf.png used on input line 408.
 (pdftex.def)             Requested size: 432.41884pt x 229.76015pt.
 
-<diagrams/javascript_cdf.png, id=26, 1441.385pt x 765.86125pt>
+<diagrams/javascript_cdf.png, id=29, 1441.385pt x 765.86125pt>
 File: diagrams/javascript_cdf.png Graphic file (type png)
 
 <use diagrams/javascript_cdf.png>
 Package pdftex.def Info: diagrams/javascript_cdf.png used on input line 414.
 (pdftex.def)             Requested size: 432.41884pt x 229.76015pt.
- [5]
+
 Overfull \hbox (22.2932pt too wide) in paragraph at lines 478--489
  [][][] 
  []
 
-[6 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
-ng>]
+
 Overfull \hbox (6.5835pt too wide) in paragraph at lines 498--509
  [][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_c
-df.png>]
+[6]
 Overfull \hbox (19.11595pt too wide) in paragraph at lines 555--565
  [][][] 
  []
 
-
+[7 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
+ng>]
 Underfull \hbox (badness 10000) in paragraph at lines 580--580
 
  []
@@ -583,9 +581,11 @@ Overfull \hbox (4.6653pt too wide) in paragraph at lines 576--587
  [][][] 
  []
 
-[8] <at-a-glance.png, id=44, 451.08525pt x 436.029pt>
+[8 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_cd
+f.png>] <at-a-glance.png, id=44, 451.08525pt x 436.029pt>
 File: at-a-glance.png Graphic file (type png)
- <use at-a-glance.png>
+
+<use at-a-glance.png>
 Package pdftex.def Info: at-a-glance.png used on input line 632.
 (pdftex.def)             Requested size: 252.0pt x 243.58908pt.
 
@@ -594,9 +594,9 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 632--633
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3428) has occurred while \output is active []
 
- [9 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/at-a-glance.png>]
+ [9]
 Underfull \hbox (badness 1221) in paragraph at lines 662--663
 \T1/aer/m/n/9 puter's browser to store your pref-er-ences.
  []
@@ -606,19 +606,17 @@ Overfull \hbox (3.60434pt too wide) in paragraph at lines 656--668
  [][][] 
  []
 
-
+[10 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/at-a-glance.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [11
 
-]
+(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [11]
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
- 6440 strings out of 494045
- 90957 string characters out of 3145963
- 195912 words of memory out of 3000000
- 9590 multiletter control sequences out of 15000+200000
+ 6441 strings out of 494045
+ 90971 string characters out of 3145963
+ 197912 words of memory out of 3000000
+ 9591 multiletter control sequences out of 15000+200000
  49938 words of font info for 69 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  42i,13n,41p,1446b,1679s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -634,7 +632,7 @@ nts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
 mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sigproc-sp.pdf (11 pages, 357852 bytes).
+Output written on sigproc-sp.pdf (11 pages, 358203 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

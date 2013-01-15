@@ -108,10 +108,7 @@ INSERT ABSTRACT HERE??
 \section{Introduction}
 We wish to automate the detection of third-party tracking mechanisms while browsing the web on a mobile device. To this end, we will adopt the FourthParty\footnote{http://www.fourthparty.info} project's approach and instrument a popular open-source mobile browser (i.e. Firefox) to be used as an enhanced web crawler. This enables us to log realistic end-user interactions (e.g. execution of embedded scripts) as opposed to just downloading each web page's static content, which is what traditional web crawlers do.
 
-The mobile web crawler is the tool that we will use to collect valuable information in order to conduct our comparison between the Mobile and Traditional third-party tracking ecosystems and their practices.
-
-
-\section{Background and Motivation}
+The mobile web crawler is the tool that we will use to collect valuable information in order to conduct our comparison between the Mobile and Traditional third-party tracking ecosystems and their practices. We will also analyze our obtained data to characterize the behavior of emulated mobile devices and assess the extend to which they can be employed as a substitute for physical devices when carrying out web privacy research. Lastly, to help contextualize the empirical part of this project, we provide a case study on privacy policies and how they relate to the web tracking mechanisms that we see in practice.
 
 \section{Related Work}
 MARCELA
@@ -164,7 +161,7 @@ The FourthPartyMobile code was the end result of four development phases:
 \end{enumerate}
 
 \section{Methodology}
-This section details the steps we took to ensure that our results are highly reproducible. It also describes our test bed and the reasoning behind it.
+This section details the steps we took to ensure that our results are highly reproducible. It also describes our test bed and the reasoning behind it. In addition, our program's source code and detailed usage instructions can be found in the project's website (http://www.FourthPartyMobile.info).
 
 
 \begin{figure*}[ht] 
@@ -206,7 +203,7 @@ The two emulated devices were created with the Android Virtual Device (AVD) tool
 \subsection{FourthParty SQLite Database Schema}
 Figure \ref{fig:db_schema} shows the database schema generated on every crawl. The \emph{cookies} table is self-contained and describes all the cookie-related creation, modification and deletion events, along with the host responsible for each event, the value written to the cookie, and other interesting metadata. JavaScript execution details are divided into the \emph{javascript} and \emph{javascript\_calls} tables, where the former lists the functions triggered by the scripts and the latter stores the arguments given to those functions. On the HTTP side, the \emph{http\_requests} table lists each HTTP Request's basic information and is complemented by the \emph{http\_request\_headers} table, which contains all of the corresponding HTTP headers and their values. A similar arrangement exists for HTTP Responses. Lastly, the \emph{pages} and \emph{content\_policy} tables are concerned with the location of the content being sent to the user's browser and the pages responsible for it.
 
-Unfortunately, the mobile-enabled Mozilla Add-On SDK currently lacks support for the types of hooks required to properly intercept JavaScript calls and content\_policy invocations. For this reason, the SQLite tables specifically allocated for JavaScript traces and content\_policy logs are never populated during our crawls. However, HTTP responses state their content type in the headers and all JavaScript code is transferred to the browser through HTTP responses. Thus, a simple query like the one shown in Listing 1 reveals the HTTP responses associated with that sort of code. By leveraging the power of SQL queries, we were able to carry out very detailed analyses related to JavaScript code in spite of the absence of the \emph{javascript} and \emph{javascript\_calls} tables (refer to Section 6).
+Unfortunately, the mobile-enabled Mozilla Add-On SDK currently lacks support for the types of hooks required to properly intercept JavaScript calls and content\_policy invocations. For this reason, the SQLite tables specifically allocated for JavaScript traces and content\_policy logs are never populated during our crawls. However, HTTP responses state their content type in the headers and all JavaScript code is transferred to the browser through HTTP responses. Thus, a simple query like the one shown in Listing 1 reveals the HTTP responses associated with that sort of code. By leveraging the power of SQL queries, we were able to carry out very detailed analyses related to JavaScript code in spite of the absence of the \emph{javascript} and \emph{javascript\_calls} tables (refer to Section \ref{sec:analysis}).
 
 \noindent\begin{minipage}{1.0\linewidth}\centering
 \begin{lstlisting}[caption=Example JavaScript analysis based on HTTP Responses]
@@ -217,6 +214,9 @@ WHERE UPPER(name)='CONTENT-TYPE' AND value LIKE '%javascript%'
 \end{minipage}
 
 \section{Data Analysis}
+\label{sec:analysis}
+
+Throughout this section, we investigate the current state of mobile web tracking based on the data collected by way of FourthPartyMobile crawls. The result sets analyzed in this section can be downloaded from the project's website (http://www.FourthPartyMobile.info).
 
 \subsection{Main Players}
 
@@ -315,7 +315,7 @@ Another basic way to categorize cookies' longevities is by their expiration time
   \label{tab:dm_cookie_longeivity}%
 \end{table}%
 
-Next we turn to the number of JavaScript calls, including the third-party JavaScript calls. We define third-party JavaScript calls as in the previous section. Observe, in Tables~\ref{tab:dm_javascript_100} and~\ref{tab:dm_javascript_500} that the raw number of JavaScript calls as well as the proportion of calls by third-party entities fall from desktop to tablet to mobile phone. This suggests, from a tracking point of view, that JavaScript is increasingly used for purposes more in accordance with site mechanics (e.g. rendering) as opposed to tracking as devices move in the mobile direction. This could be a relic of the fact that, since these mobile devices lack the same computing power as desktops, adding extra JavaScript for purposes other than running the first-party content would slow browsing down to an unacceptable degree. Hence, one could hypothesize that, in general, trackers will use cookies (which do not require significant computational power) more frequently when compared to JavaScript on mobile devices.
+Next, we turn to the number of JavaScript calls, including the third-party JavaScript calls. We define third-party JavaScript calls as in the previous section. Observe, in Tables~\ref{tab:dm_javascript_100} and~\ref{tab:dm_javascript_500} that the raw number of JavaScript calls as well as the proportion of calls by third-party entities fall from desktop to tablet to mobile phone. This suggests, from a tracking point of view, that JavaScript is increasingly used for purposes more in accordance with site mechanics (e.g. rendering) as opposed to tracking as devices move in the mobile direction. This could be a relic of the fact that, since these mobile devices lack the same computing power as desktops, adding extra JavaScript for purposes other than running the first-party content would slow browsing down to an unacceptable degree. Hence, one could hypothesize that, in general, trackers will use cookies (which do not require significant computational power) more frequently when compared to JavaScript on mobile devices.
 
 
 \begin{table}[htbp]
@@ -678,6 +678,8 @@ The lessons learned in the last stage of our case study are two-fold: (1) \pps a
 We hope that our analysis of the \pps of the three websites chosen for our case study will serve as a starting point for further conversation on the creation of \pps and privacy standards.
 
 \section{Conclusions and Future Work}
+
+
 
 \nocite{*}
 \bibliographystyle{abbrv}
