@@ -204,9 +204,53 @@ Figure \ref{fig:db_schema} shows the database schema generated on every crawl.
 \section{Data Analysis}
 
 \subsection{Main Players}
-CHRIS
 
-Three types of players: advertisers, content providers, and third-party content providers (embedded in sites)
+In determining the sites with the most prevalent tracking habits, we first considered those sites who added the most cookies during the crawl. Specifically, we considered those sites who were in (or tied with) the top 25 for each device in terms of the number of cookies added in the 500-site crawl. Notably, third-party advertising and analytics sites comprised a sizable minority of the top 25 cookie-adders, forming 34.6\% of the top 25 for desktops, 39.3\% for tablets and 30.8\% for phones. The majority of first-party cookie adders were online retailers and news sites.
+
+As recorded in Table~\ref{tab:major_cookies}, roughly one third of the top cookie-adders were ranked highly across all three types of devices. Differences in the top cookie-adders across the three devices were partially a relic of third-party websites that added cookies heavily on one platform, but not the others. Interestingly, tablets appeared to lie in between phones and computers in terms of top advertising/analytics cookie-adders. Specifically, among others, the tablet shared \texttt{2o7.net} and \texttt{collective-media.net} with phones and \texttt{dotomi.com} and \texttt{rfihub.com} with desktops. In contrast, phones and desktops did not share a top analytics/advertiser in their top 25 that did not also appear in the top 25 for tablets.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cookie-adding websites in top 25 for all devices}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+     \multicolumn{1}{|l|}{\textbf{Website}} & \textbf{Description}    \\ \hline
+    \multicolumn{1}{|l|}{\texttt{cafepress.com}} & Online retailer   \\
+    \multicolumn{1}{|l|}{\texttt{go.com}} & Disney-owned web portal  \\
+    \multicolumn{1}{|l|}{\texttt{homedepot.com}} & Online retailer    \\
+    \multicolumn{1}{|l|}{\texttt{hootsuite.com}} & Social media management site   \\
+    \multicolumn{1}{|l|}{\texttt{pubmatic.com}} & Online advertising company   \\
+    \multicolumn{1}{|l|}{\texttt{revsci.net}} & Shell for advertiser Audience Science    \\
+    \multicolumn{1}{|l|}{\texttt{rubiconproject.com}} & Online advertising company   \\
+    \multicolumn{1}{|l|}{\texttt{verizon.com}} & Telecommunications/ online retailer   \\
+    \multicolumn{1}{|l|}{\texttt{webs.com}} & Web hosting services  \\ \hline
+    \end{tabular}%
+  \label{tab:major_cookies}%
+\end{table}%
+
+The next metric for tracking that we considered was the number of JavaScript calls made by one site that refer to another site. In most cases, these calls were to third-party advertisers and analytic organizations. These organizations were largely completely separate third-parties, but in cases such as \texttt{washingtonpost.com} and \texttt{wapolabs.com}, the first and  ``third" parties were actually part of the same umbrella organization. 
+
+Websites in the top 25 for containing JavaScript calls by other websites for all three types of devices are contained Table~\ref{tab:major_js}. Observe that these sites are predominately news and retailing sites, a trend that held for the websites not included in the table. However, beyond these 6 sites, the three devices only shared a small handful of sites in their JavaScript top 25, unlike in the case of cookie-adders.
+
+Overall, based on our cookie and JavaScript analysis, news media and online retailers appear to be the most pervasive first-party trackers while third-party advertisers and analytics groups have a notable presence on all three types of devices.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Websites in Top 25 for all devices for containing JS referring to other sites}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+     \multicolumn{1}{|l|}{\textbf{Referrer}} & \textbf{Description}    \\ \hline
+     \multicolumn{1}{|l|}{\texttt{cbslocal.com}} & Online news site   \\
+    \multicolumn{1}{|l|}{\texttt{drudgereport.com}} & Online news site   \\
+     \multicolumn{1}{|l|}{\texttt{mypoints.com}} & Online reward-points retailer   \\
+      \multicolumn{1}{|l|}{\texttt{theblaze.com}} & Online news site   \\
+       \multicolumn{1}{|l|}{\texttt{time.com}} & Online news site   \\
+        \multicolumn{1}{|l|}{\texttt{verizonwireless.com}} & Telecommunications/ online retailer   \\ \hline
+    \end{tabular}%
+  \label{tab:major_js}%
+\end{table}%
+
 
 \subsection{Cookie/JavaScript Pervasiveness}
 CHRIS
