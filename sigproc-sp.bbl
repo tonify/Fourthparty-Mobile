@@ -1,3 +1,8 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{FLASH_COOKIES}
+M.~Ayenson, D.~J. Wambach, A.~Soltani, N.~Good, and C.~J. Hoofnagle.
+\newblock Flash cookies and privacy ii: Now with html5 and etag respawning.
+\newblock July 2011.
 
 \end{thebibliography}

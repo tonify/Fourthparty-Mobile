@@ -150,18 +150,6 @@ FourthPartyMobile's architecture (see Figure \ref{fig:component_diagram}) delega
 \label{fig:db_schema}
 \end{figure*}
 
-\begin{figure*}[ht] 
-\centering \includegraphics[scale=0.30]{diagrams/cookies_cdf.png}
-\caption{Cookie size distribution with Top 500 dataset}
-\label{fig:cookie_cdf}
-\end{figure*}
-
-\begin{figure*}[ht] 
-\centering \includegraphics[scale=0.30]{diagrams/javascript_cdf.png}
-\caption{JavaScript script size distribution with Top 500 dataset}
-\label{fig:javascript_cdf}
-\end{figure*}
-
 \subsection{Prototype}
 We took advantage of the fact that the FourthParty\footnote{http://www.fourthparty.info} project is open-source. After analyzing its codebase, we ported its core functionality over to support Android-based mobile devices, such as smartphones and tablets. FourthPartyMobile is implemented in Java and JavaScript, leveraging both the Android SDK and the Mozilla Add-On SDK. Persistent storage is fully compliant with FourthParty's SQLite database schema. Thus, we provide a standardized representation for traditional and mobile crawls, which facilitates data analysis. Our Crawling Backend is written in java with a SQLite JDBC library that supports Mac OS, Linux and Windows, so it should be fully multi-platform. It also supports concurrency, so multiple crawls can be recorded simultaneously. 
 
@@ -280,11 +268,23 @@ In order to assess the viability of emulated devices for future research, we wil
 
 Given that our research is focused on privacy and web tracking techniques, cookies and JavaScript are two important mechanisms that we need to record as accurately as possible, considering that they are the most common means used by websites to store information on the client's side and to analyze the client's environment (e.g. installed plugins, screen size, system fonts). For this reason, we will compare cookie and JavaScript interactions seen in physical and emulated devices. At the same time, HTTP Responses will be used to determine if the actual content served to the emulated devices is the desired one or not. Throughout this section, we will be comparing the HTC Evo 4G with an emulated Nexus S smartphone, and the two physical tablets (Asus Pad TF300T and Samsung Galaxy Tab 2) with an emulated Nexus 7.
 
+\begin{figure*}[ht] 
+\centering \includegraphics[scale=0.30]{diagrams/cookies_cdf.png}
+\caption{Cookie size distribution with Top 500 dataset}
+\label{fig:cookie_cdf}
+\end{figure*}
+
+\begin{figure*}[ht] 
+\centering \includegraphics[scale=0.30]{diagrams/javascript_cdf.png}
+\caption{JavaScript script size distribution with Top 500 dataset}
+\label{fig:javascript_cdf}
+\end{figure*}
+
 \subsubsection{Cookie Interactions}
 
 There are three possible actions that can be taken when it comes to cookies: creation, modification and deletion. Tables \ref{tab:cookie_counts_100} and \ref{tab:cookie_counts_500} show the number of cookie events detected by our five mobile devices when crawling the Top 100 and Top 500 URL datasets respectively. It can be seen that the HTC Evo 4G and the Emulated Nexus S presented congruent numbers, while the three tablets appear to be remarkably dissimilar from one other.
 
-Both datasets show the aforementioned trends, which are quantified in Table \ref{tab:cookie_deltas}, where the differences between the emulated and expected results are presented. In the case of tablets, the two physical devices were averaged and taken as the expected result. We found that the emulated phone only distanced itself from the real phone by 16.67\% or less in terms of the cookie action counts. The emulated tablet showed lower fidelity, being off by 55.73\% in some cases.
+Both datasets show the aforementioned trends, which are quantified in Table \ref{tab:cookie_deltas}, where the differences between the emulated and expected (physical) results are presented. In the case of tablets, the two physical devices were averaged and taken as the expected result. We found that the emulated phone only distanced itself from the real phone by 16.67\% or less in terms of the cookie action counts. The emulated tablet showed lower fidelity, being off by 55.73\% in some cases.
 
 \begin{table}[htbp]
   \centering
@@ -376,7 +376,11 @@ Table \ref{tab:cookie_sizes} gives the average size of the cookies detected duri
 
 \subsubsection{HTTP Interactions}
 
-We are interested in comparing the content served to the various mobile devices to determine if websites are effectively fooled by the device emulator.
+We are interested in comparing the content served to the various mobile devices to determine if websites are effectively fooled by the device emulator. This comes down to the HTTP Responses reported by FourthPartyMobile, which most of the time contain a \emph{Content-Type} header indicating the MIME type of the response's payload. From the crawl databases, we found that a around half of the HTTP responses carried images in all of their formats (e.g. jpg, png, gif) and the other half was mostly comprised of text. We separate JavaScript from the other types of text-based content (e.g. html and plaintext) because, as mentioned before, it is an integral part of web tracking and browser fingerprinting. While we thought that Flash cookies would be of common use based on previous research \cite{FLASH_COOKIES}, none of our crawls conducted on mobile devices with the Top 500 dataset contained more than 24 flash-related HTTP responses. This may be due to the fact that mobile browsers disable plug-in content by default and download such content on-demand when the user clicks on it.
+
+Tables \ref{tab:http_100} and \ref{tab:http_500} show the counts of the various content types obtained with the Top 100 and Top 500 datasets respectively. Images are clearly the predominant type of media associated with HTTP responses in all of the crawls. At first glance, the counts reported by the Emulated Nexus S are not very distant from those of the physical phone. The same can be said about the emulated tablet (Nexus 7) with respect to the counts of its physical counterparts (Asus Pad TF300T and Samsung Galaxy Tab 2), but only when dealing with the Top 100 dataset. The emulated tablet was less satisfactory in replicating what was seen in the physical tablets with the Top 500 dataset.
+
+Table \ref{tab:http_diffs} summarizes the difference between the emulated and expected (physical) results. In the case of tablets, the two physical devices were averaged and taken as the expected result. Similar to what was seen with cookies, the emulated phone does not deviate considerably from our reference physical phone, with deltas of less than 8.33\% in all counts. While the behavior of the emulated tablet was unexpectedly close to what we desired with the Top 100 dataset, the larger dataset brought about deltas of around 20\% on all counts, which might be unacceptable. This would explain why, as discussed in the previous subsection, the emulated tablet did not behave the same way as the physical tablets in terms of cookie activity. After all, it appears that the emulated tablet did not receive the same web content that the physical tablets received.
 
 \begin{table}[htbp]
   \centering
@@ -391,7 +395,7 @@ We are interested in comparing the content served to the various mobile devices 
     \multicolumn{1}{|l|}{\textbf{Samsung G. Tab 2}} & 5460  & 3069  & 1294  & 1097 \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 4743  & 2848  & 1007  & 888 \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:http_100}%
 \end{table}%
 
 \begin{table}[htbp]
@@ -408,7 +412,7 @@ We are interested in comparing the content served to the various mobile devices 
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 20441 & 12735 & 4298  & 3408 \\
  \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:http_500}%
 \end{table}%
 
 \begin{table}[htbp]
@@ -419,14 +423,18 @@ We are interested in comparing the content served to the various mobile devices 
     \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Dataset}}} & \multicolumn{4}{|c|}{\textbf{HTTP Responses}} \\ \cline{3-6}
     \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{total}} & \multicolumn{1}{|c|}{\textbf{image}} & \multicolumn{1}{|c|}{\textbf{JS}} & \multicolumn{1}{|c|}{\textbf{other}} \\ \hline
     \multicolumn{1}{|l|}{\multirow{2}[4]{*}{\textbf{Phone}}} & Top 100 & -4.42\% & -2.69\% & -5.96\% & -8.33\% \\
-    \multicolumn{1}{|l|}{} & Top 500 & 2.96\% & 1.10\% & 7.02\% & 4.67\% \\
+    \multicolumn{1}{|l|}{} & Top 500 & 2.96\% & 1.10\% & 7.02\% & 4.67\% \\ \hline
     \multicolumn{1}{|l|}{\multirow{2}[4]{*}{\textbf{Tablet}}} & Top 100 & -4.18\% & -1.40\% & -8.79\% & -7.26\% \\
     \multicolumn{1}{|l|}{} & Top 500 & -21.12\% & -19.68\% & -23.68\% & -23.03\% \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:http_diffs}%
 \end{table}%
 
 \subsubsection{JavaScript Interactions}
+
+A high-level picture of the JavaScript code that was executed in the mobile browsers can be drawn based on the size distribution of the scripts transmitted by the content providers. Larger scripts are likely to contain more lines of code, so they are expected to execute more powerful (or intrusive) procedures on the client-side.
+
+Table \ref{tab:javascript_sizes} gives the average size in Bytes of the JavaScript files executed on each device during the Top 500 crawl. All averages have the same order of magnitude, so a more in-depth approach is in order.  Similar to what was done with the cookie sizes, we performed a best-fit analysis with the help of 2R Soft\footnote{http://www.2rsoft.tk} and selected the most appropriate cumulative density function (CDF). Judging by the Anderson-Darling statistic, all crawls are best represented by a logistic distribution with parameters given in Table \ref{tab:javascript_sizes}. The end results are plotted in Figure \ref{fig:javascript_cdf}. Interestingly, the two emulated devices have JavaScript size CDF curves that are closer to each other than to that of any of the physical devices. In addition, all three physical devices have practically the same JavaScript size CDF curve. Nonetheless, the distance between the curves associated with emulated devices and the curves associated with their physical counterparts is relatively small in comparison with what was seen in the cookie size CDFs (Figure \ref{fig:cookie_cdf}) when dealing with tablets.
 
 \begin{table}[htbp]
   \centering
@@ -441,8 +449,11 @@ We are interested in comparing the content served to the various mobile devices 
     \multicolumn{1}{|l|}{\textbf{Samsung G. Tab 2}} & 12,711.00 & \parbox{4cm}{Logistic,\\ $\alpha$=12,711.00,\\$\lambda$=0.00007\\} \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 14,445.22 & \parbox{4cm}{Logistic,\\ $\alpha$=14,445.22,\\$\lambda$=0.00006\\} \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:javascript_sizes}%
 \end{table}%
+
+\subsubsection{Our Findings}
+We believe that we have provided enough evidence to prove that an emulated phone (i.e. Emulated Nexus S) can impersonate a physical phone (i.e. HTC Evo 4G) with a great degree of accuracy. On the other hand, the Emulated Nexus 7 tablet consistently falls short when compared to what is expected from a physical tablet and most metrics seem to indicate that it is closer to mimicking an emulated phone than any of the physical devices.
 
 \subsection{Privacy Policy Case Study}
 After running our web crawls, we designed a case study in which we look at the privacy policies and related data collected from our crawls of three categories of websites that we found were amongst the most popular sites today: social networks, news sites, and e-commerce sites. While pornography sites are also amongst the most popular sites online, we do not include this fourth category in our case study for reasons of decency. 
