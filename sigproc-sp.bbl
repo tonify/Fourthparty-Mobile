@@ -1,11 +1,12 @@
 \begin{thebibliography}{1}
 
-\bibitem{supercookies}
-
-
 \bibitem{amazon}
 {A}mazon.com {I}nc.
 \newblock {A}mazon.com {P}rivacy {N}otice, Apr 2012.
+
+\bibitem{supercookies}
+J.~Angwin.
+\newblock Latest in web tracking: Stealthy 'supercookies'.
 
 \bibitem{FLASH_COOKIES}
 M.~Ayenson, D.~J. Wambach, A.~Soltani, N.~Good, and C.~J. Hoofnagle.
