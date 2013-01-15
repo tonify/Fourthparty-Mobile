@@ -159,7 +159,7 @@ FourthPartyMobile's architecture (see Figure \ref{fig:component_diagram}) delega
 \begin{figure*}[ht] 
 \centering \includegraphics[scale=0.30]{diagrams/javascript_cdf.png}
 \caption{JavaScript script size distribution with Top 500 dataset}
-\label{fig:cookie_cdf}
+\label{fig:javascript_cdf}
 \end{figure*}
 
 \subsection{Prototype}
@@ -217,9 +217,31 @@ By website category (e.g. porn, news, etc) and by domain (e.g. com, net, etc)
 ALL OF US
 
 \subsection{Physical vs Emulated Devices}
-DIEGO
+
+We ran into multiple unforeseeable device-specific problems while conducting our experiments on real phones and tablets. Some Android devices did not allow applications from \emph{Unknown Sources} to create directories inside their memory card, which was necessary for the FourthPartyMobile add-on to work. Meanwhile, others had no option to disable their inactivity timeout, which led to their screen turning off and a full reload of the crawling scripts if we did not tap the screen every 30 minutes. In some cases, incoming calls and emails, calendar notifications, and other everyday occurrences would interfere with the crawls. Even though some of the issues were solved by \emph{rooting}\footnote{Equivalent to \emph{jailbreaking} in iOS; unlocks privileged control over the Android OS.} the device, the time that it took to set up a new test bed became unpredictable and some problems had no apparent solution. Therefore, in this section we investigate whether or not emulated Android devices are a good substitute to their physical counterparts when studying dynamic web interactions, as they provide several advantages that make them more convenient:
+
+\begin{itemize}
+\item \textbf{Stability}: emulated devices lie in the software layer and are programmed to behave in accordance with API specifications, whereas physical devices must translate the expected API-compliant behavior into hardware-dependent operations. Consequently, physical devices are more prone to error and may exhibit hardware-specific behavior.
+
+\item \textbf{Developer-Friendly}: emulated devices are completely unlocked and expose all of the developer options that an Android Dev Phone (ADP) comes with (e.g. SIM-unlocked and hardware-unlocked).
+
+\item \textbf{Vast Resources}: emulated devices can be assigned arbitrary amounts of RAM and persistent memory. Most importantly, they run on desktop CPUs, which are significantly more powerful than those found in a real mobile device. As a result, script execution and image rendering is less likely to overwhelm the device, which is a common issue in physical devices.
+
+\item \textbf{Easier to Attain}: Android market share is 72\% as of November 2012\footnote{http://mashable.com/2012/11/14/android-72-percent/}, but that does not necessarily mean that researchers will be able to find (or afford) a good variety of Android devices for them to experiment on. On the other hand, multiple emulated devices can be instantiated on any modern PC.
+
+\item \textbf{No Background Interference}: the primary use of physical devices being used to run web crawls is not necessarily research. Incoming calls and other invasive everyday functionalities can put an ongoing crawl to an end. Meanwhile, emulated devices are dedicated to the experiment at hand and do not have any of the standard services (e.g. calendar, contacts, email) configured.
+\end{itemize} 
+
+In order to assess the viability of emulated devices for future research, we will analyze the accuracy of the interactions recorded when running FourthPartyMobile on them. Ideally, an emulated mobile device (i.e. phone or tablet) should mimic its physical counterpart in such a way that: (1) the content served to it by websites is the same as the one served to its physical equivalent and (2) the content received triggers the same behavior that it would on its physical analogue. Thus, an emulated device must be able to trick HTTP servers into thinking that it is indeed a mobile device and its dynamic properties should be consistent with those of the device being impersonated.
+
+Given that our research is focused on privacy and web tracking techniques, cookies and JavaScript are two important mechanisms that we need to record as accurately as possible, considering that they are the most common means used by websites to store information on the client's side and to analyze the client's environment (e.g. installed plugins, screen size, system fonts). For this reason, we will compare cookie and JavaScript interactions seen in physical and emulated devices. At the same time, HTTP Responses will be used to determine if the actual content served to the emulated devices is the desired one or not. Throughout this section, we will be comparing the HTC Evo 4G with an emulated Nexus S smartphone, and the two physical tablets (Asus Pad TF300T and Samsung Galaxy Tab 2) with an emulated Nexus 7.
 
 \subsubsection{Cookie Interactions}
+
+There are three possible actions that can be taken when it comes to cookies: creation, modification and deletion. Tables \ref{tab:cookie_counts_100} and \ref{tab:cookie_counts_500} show the number of cookie events detected by our five mobile devices when crawling the Top 100 and Top 500 URL datasets respectively. It can be seen that the HTC Evo 4G and the Emulated Nexus S presented congruent numbers, while the three tablets appear to be remarkably dissimilar from one other.
+
+Both datasets show the aforementioned trends, which are quantified in Table \ref{tab:cookie_deltas}, where the differences between the emulated and expected results are presented. In the case of tablets, the two physical devices were averaged and taken as the expected result. We found that the emulated phone only distanced itself from the real phone by 16.67\% or less in terms of the cookie action counts. The emulated tablet showed lower fidelity, being off by 55.73\% in some cases.
+
 \begin{table}[htbp]
   \centering
   \caption{Cookie action counts with Top 100 dataset}
@@ -233,7 +255,7 @@ DIEGO
     \multicolumn{1}{|l|}{\textbf{Samsung G. Tab 2}} & 1374  & 2494  & 107 \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 1282  & 2029  & 97 \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:cookie_counts_100}%
 \end{table}%
 
 \begin{table}[htbp]
@@ -249,7 +271,7 @@ DIEGO
     \multicolumn{1}{|l|}{\textbf{Samsung G. Tab 2}} & 5630  & 7501  & 319 \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 4501  & 5107  & 116 \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:cookie_counts_500}%
 \end{table}%
 
 \begin{table}[htbp]
@@ -265,8 +287,11 @@ DIEGO
     \multicolumn{1}{|l|}{\multirow{2}[4]{*}{\textbf{Tablet}}} & Top 100 & 3.93\% & 5.54\% & 31.97\% \\
     \multicolumn{1}{|l|}{} & Top 500 & -16.59\% & -25.40\% & -55.73\% \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:cookie_deltas}%
 \end{table}%
+
+
+Besides having the same amount of cookie events as a physical device, it is important that an emulated device is exposed to cookies of similar nature. A basic way to categorize cookies is by their expiration time: some are evicted from the browser's memory after a finite amount of time, while others are meant to stay in the browser's memory permanently. Permanent cookies are set by Mozilla Firefox to expire after exactly $9.223372036854776*10^{18}$ milliseconds; temporary cookies have eviction times that are more manageable (e.g. 11 days). Table \ref{tab:cookie_longevity} gives the total count of permanent and temporary cookies found in crawls with the Top 500 dataset, as well as their relative proportions. Once more, the Emulated Nexus S mirrors the HTC Evo 4G's behavior fairly closely. To our surprise, the counts and nature of cookies reported by the Emulated Nexus 7 are almost the same as those of the Emulated Nexus S. As a result, the Emulated Nexus 7 is not a good replacement for either of the tablets under this criteria. Referring back to Table \ref{tab:cookie_counts_500}, we soon realized that the Emulated Nexus 7 has consistently been acting more like a phone than as a tablet when it comes to cookies.
 
 
 \begin{table}[htbp]
@@ -282,8 +307,12 @@ DIEGO
     \multicolumn{1}{|l|}{\textbf{Samsung G. Tab 2}} & 3779  & 9671  & 28.10\% & 13450 \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 3014  & 6710  & 31.00\% & 9724 \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:cookie_longevity}%
 \end{table}%
+
+Now that we analyzed cookies by their counts and their longevity, we can dig deeper and investigate their content. Cookie size is a good metric to use when looking at the overall trends, since it gives an idea of the cookie usage patterns employed by the content providers. While some websites can write a short ID to a user's cookie and maintain the user's profile on their back-end, other websites might want to use cookies as a side-channel and keep all relevant tracking information on the client's side, appending data to existing cookies.
+
+Table \ref{tab:cookie_sizes} gives the average size of the cookies detected during the Top 500 crawls by the different mobile devices. Note that tablets reported a larger cookie size on average than phones. To improve our understanding of the cookie size distributions for the two platforms, we used 2R Soft\footnote{http://www.2rsoft.tk} to run a single-series analysis over the cookies associated with each crawl and used goodness-of-fit tests to select the best cumulative density function (CDF) fit. An exponential distribution gave the best Anderson-Darling statistic in all cases, with the parameters given in Table \ref{tab:cookie_sizes}. We plotted the five CDFs and obtained Figure \ref{fig:cookie_cdf}. Tablet crawls are represented with dotted lines and phone crawls are shown as solid lines. From the CDF curves, it is clear that the Emulated Phone (Nexus S) serves as a convincing approximation to the Physical Phone (HTC Evo 4G). Meanwhile, the Emulated Tablet (Nexus 7) remains closer to the phone crawls than to the real tablet crawls. Also, it should be noted that the two physical tablets (Asus TF300T and Samsung Galaxy Tab 2) show cookie sizes that tend to be larger than the ones registered in phones.
 
 \begin{table}[htbp]
   \centering
@@ -291,17 +320,19 @@ DIEGO
     \begin{tabular}{|c|c|c|}
     \hline
     \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{2}{|c|}{\textbf{Cookies - Top 500 Dataset}} \\ \cline{2-3}
-    \multicolumn{1}{|c|}{} & \textbf{Avg Size (Bytes)} & \textbf{Best CDF Fit} \\ \hline
+    \multicolumn{1}{|c|}{} & \textbf{Avg Size (B)} & \textbf{Best CDF Fit} \\ \hline
     \multicolumn{1}{|l|}{\textbf{HTC Evo 4G}} & 54.29 & Exp., $\lambda$=0.01842 \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus S}} & 51.86 & Exp., $\lambda$=0.01928 \\
     \multicolumn{1}{|l|}{\textbf{Asus Pad TF300T}} & 71.37 & Exp., $\lambda$=0.01401 \\
     \multicolumn{1}{|l|}{\textbf{Samsung G. Tab 2}} & 85.37 & Exp., $\lambda$=0.01171 \\
     \multicolumn{1}{|l|}{\textbf{Emulated Nexus 7}} & 59.20 & Exp., $\lambda$=0.01689 \\ \hline
     \end{tabular}%
-  \label{tab:addlabel}%
+  \label{tab:cookie_sizes}%
 \end{table}%
 
 \subsubsection{HTTP Interactions}
+
+We are interested in comparing the content served to the various mobile devices to determine if websites are effectively fooled by the device emulator.
 
 \begin{table}[htbp]
   \centering

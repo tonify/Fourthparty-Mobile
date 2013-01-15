@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  14 JAN 2013 18:16
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 00:08
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -359,24 +359,6 @@ LaTeX Warning: Label `tab:addlabel' multiply defined.
 
 LaTeX Warning: Label `tab:addlabel' multiply defined.
 
-
-LaTeX Warning: Label `tab:addlabel' multiply defined.
-
-
-LaTeX Warning: Label `fig:cookie_cdf' multiply defined.
-
-
-LaTeX Warning: Label `tab:addlabel' multiply defined.
-
-
-LaTeX Warning: Label `tab:addlabel' multiply defined.
-
-
-LaTeX Warning: Label `tab:addlabel' multiply defined.
-
-
-LaTeX Warning: Label `tab:addlabel' multiply defined.
-
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -475,94 +457,99 @@ Package pdftex.def Info: diagrams/javascript_cdf.png used on input line 160.
  <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/component_diagr
 am.png (PNG copy)>] [2 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/di
 agrams/db_diagram.png (PNG copy)>]
-Overfull \hbox (22.2932pt too wide) in paragraph at lines 275--286
- [][][] 
- []
-
-
-Overfull \hbox (25.41125pt too wide) in paragraph at lines 291--302
- [][][] 
- []
-
-
-Overfull \hbox (19.11595pt too wide) in paragraph at lines 342--352
- [][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--363
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 363--364
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 364--365
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 365--366
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 366--367
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 367--367
-[]$[]$| 
- []
-
-
-Overfull \hbox (4.6653pt too wide) in paragraph at lines 359--370
- [][][] 
+Overfull \hbox (4.88603pt too wide) in paragraph at lines 226--227
+[]\T1/aer/bx/n/9 Developer-Friendly\T1/aer/m/n/9 : em-u-lated de-vices are com-
+pletely
  []
 
 [3 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
 ng>] [4 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascri
 pt_cdf.png>]
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [5
+Overfull \hbox (22.2932pt too wide) in paragraph at lines 300--311
+ [][][] 
+ []
 
-]
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux)
+
+Overfull \hbox (6.5835pt too wide) in paragraph at lines 320--331
+ [][][] 
+ []
+
+
+Overfull \hbox (19.11595pt too wide) in paragraph at lines 373--383
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 394--395
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 395--396
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 396--397
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 397--398
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 398--398
+[]$[]$| 
+ []
+
+
+Overfull \hbox (4.6653pt too wide) in paragraph at lines 390--401
+ [][][] 
+ []
+
+[5] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl)
+[6
+
+] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5979 strings out of 494045
- 86566 string characters out of 3145963
- 201808 words of memory out of 3000000
- 9135 multiletter control sequences out of 15000+200000
+ 5985 strings out of 494045
+ 86691 string characters out of 3145963
+ 198808 words of memory out of 3000000
+ 9141 multiletter control sequences out of 15000+200000
  49450 words of font info for 67 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 42i,13n,41p,824b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,41p,1269b,302s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program File
@@ -574,9 +561,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX
 ts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on sigproc-sp.pdf (5 pages, 253428 bytes).
+Output written on sigproc-sp.pdf (6 pages, 265906 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
