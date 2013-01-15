@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 04:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 10:22
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -470,147 +470,173 @@ Overfull \hbox (16.5677pt too wide) in paragraph at lines 256--267
  []
 
 
-Overfull \hbox (4.88603pt too wide) in paragraph at lines 285--286
+Overfull \hbox (12.49211pt too wide) in paragraph at lines 279--288
+ [][][] 
+ []
+
+
+Overfull \hbox (12.49211pt too wide) in paragraph at lines 293--302
+ [][][] 
+ []
+
+
+Overfull \hbox (4.2027pt too wide) in paragraph at lines 324--333
+ [][][] 
+ []
+
+
+Overfull \hbox (4.2027pt too wide) in paragraph at lines 338--347
+ [][][] 
+ []
+
+[4]
+Overfull \hbox (4.88603pt too wide) in paragraph at lines 391--392
 []\T1/aer/bx/n/9 Developer-Friendly\T1/aer/m/n/9 : em-u-lated de-vices are com-
 pletely
  []
 
-<diagrams/cookies_cdf.png, id=22, 1441.385pt x 765.86125pt>
+<diagrams/cookies_cdf.png, id=25, 1441.385pt x 765.86125pt>
 File: diagrams/cookies_cdf.png Graphic file (type png)
 
 <use diagrams/cookies_cdf.png>
-Package pdftex.def Info: diagrams/cookies_cdf.png used on input line 299.
+Package pdftex.def Info: diagrams/cookies_cdf.png used on input line 408.
 (pdftex.def)             Requested size: 432.41884pt x 229.76015pt.
 
-<diagrams/javascript_cdf.png, id=23, 1441.385pt x 765.86125pt>
+<diagrams/javascript_cdf.png, id=26, 1441.385pt x 765.86125pt>
 File: diagrams/javascript_cdf.png Graphic file (type png)
 
 <use diagrams/javascript_cdf.png>
-Package pdftex.def Info: diagrams/javascript_cdf.png used on input line 305.
+Package pdftex.def Info: diagrams/javascript_cdf.png used on input line 414.
 (pdftex.def)             Requested size: 432.41884pt x 229.76015pt.
- [4]
-Overfull \hbox (22.2932pt too wide) in paragraph at lines 371--382
+ [5]
+Overfull \hbox (22.2932pt too wide) in paragraph at lines 478--489
  [][][] 
  []
 
-[5 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
+[6 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/cookies_cdf.p
 ng>]
-Overfull \hbox (6.5835pt too wide) in paragraph at lines 391--402
- [][][] 
- []
-
-[6 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_cd
-f.png>]
-Overfull \hbox (19.11595pt too wide) in paragraph at lines 448--458
+Overfull \hbox (6.5835pt too wide) in paragraph at lines 498--509
  [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--473
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 473--474
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 474--474
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 474--475
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 475--476
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 476--477
-[]$[]$| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
-
- []
-
-
-Overfull \hbox (48.3696pt too wide) in paragraph at lines 477--477
-[]$[]$| 
- []
-
-
-Overfull \hbox (4.6653pt too wide) in paragraph at lines 469--480
+ [7 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_c
+df.png>]
+Overfull \hbox (19.11595pt too wide) in paragraph at lines 555--565
  [][][] 
  []
 
-[7] <at-a-glance.png, id=41, 451.08525pt x 436.029pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 580--581
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--581
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 581--582
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--582
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 582--583
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--583
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 583--584
+[]$[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
+
+ []
+
+
+Overfull \hbox (48.3696pt too wide) in paragraph at lines 584--584
+[]$[]$| 
+ []
+
+
+Overfull \hbox (4.6653pt too wide) in paragraph at lines 576--587
+ [][][] 
+ []
+
+[8] <at-a-glance.png, id=44, 451.08525pt x 436.029pt>
 File: at-a-glance.png Graphic file (type png)
  <use at-a-glance.png>
-Package pdftex.def Info: at-a-glance.png used on input line 525.
+Package pdftex.def Info: at-a-glance.png used on input line 632.
 (pdftex.def)             Requested size: 252.0pt x 243.58908pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 525--526
+Overfull \hbox (12.0pt too wide) in paragraph at lines 632--633
  [][] 
  []
 
 
-Underfull \vbox (badness 2573) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/at-a-glance.png>]
-Underfull \hbox (badness 1221) in paragraph at lines 555--556
+ [9 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/at-a-glance.png>]
+Underfull \hbox (badness 1221) in paragraph at lines 662--663
 \T1/aer/m/n/9 puter's browser to store your pref-er-ences.
  []
 
 
-Overfull \hbox (3.60434pt too wide) in paragraph at lines 549--561
+Overfull \hbox (3.60434pt too wide) in paragraph at lines 656--668
  [][][] 
  []
 
-[9] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl)
-[10
 
-] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux) ) 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [11
+
+]
+(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
- 6433 strings out of 494045
- 90803 string characters out of 3145963
- 190912 words of memory out of 3000000
- 9583 multiletter control sequences out of 15000+200000
+ 6440 strings out of 494045
+ 90957 string characters out of 3145963
+ 195912 words of memory out of 3000000
+ 9590 multiletter control sequences out of 15000+200000
  49938 words of font info for 69 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  42i,13n,41p,1446b,1679s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
-w/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on sigproc-sp.pdf (10 pages, 350346 bytes).
+{C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
+helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
+mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sigproc-sp.pdf (11 pages, 357852 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

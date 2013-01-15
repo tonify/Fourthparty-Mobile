@@ -270,7 +270,7 @@ Overall, based on our cookie and JavaScript analysis, news media and online reta
 
 As when examining the major players in tracking, we compared desktop and mobile devices with respect to an investigation of the cookies and JavaScript calls observed during the crawls. Tables~\ref{tab:dm_cookie_counts_100} and~\ref{tab:dm_cookie_counts_500} contain the raw number of cookie-related calls for the devices. Unsurprisingly, as the devices became smaller and more mobile, the number of cookies added during the crawls decreased, likely due to space constraints. However, when considering the proportion of cookies left on a device after the crawls, cookies appear to be stickier in the short term on the more mobile devices. This result is likely due to the fact that, since trackers can add a smaller number of cookies on a mobile device, they try to keep the few cookies they place on the device as long as possible.
 
-Another basic way to categorize cookies' longevities is by their expiration time: some are evicted from the browser’s memory after a finite amount of time, while others are meant to stay in the browser’s memory permanently. Permanent cookies are set by Mozilla Firefox to expire after exactly 9.223372036854776 * $10^{18}$ milliseconds; temporary cookies have eviction times that are more manageable (e.g. 11 days). The results of examining the expiration dates are contained in Table~\ref{tab:dm_cookie_longeivity}. Note that, as with short-term cookie stickiness, the proportion of permanent cookies increases as devices become more mobile.
+Another basic way to categorize cookies' longevities is by their expiration time: some are evicted from the browser's memory after a finite amount of time, while others are meant to stay in the browser's memory permanently. Permanent cookies are set by Mozilla Firefox to expire after exactly 9.223372036854776 * $10^{18}$ milliseconds; temporary cookies have eviction times that are more manageable (e.g. 11 days). The results of examining the expiration dates are contained in Table~\ref{tab:dm_cookie_longeivity}. Note that, as with short-term cookie stickiness, the proportion of permanent cookies increases as devices become more mobile.
 
 
 \begin{table}[htbp]
@@ -279,10 +279,10 @@ Another basic way to categorize cookies' longevities is by their expiration time
     \begin{tabular}{|c|c|c|c|c|}
     \hline
     \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{4}{|c|}{\textbf{Cookies - Top 100 Dataset}} \\ \cline{2-5}
-    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Added}} & \multicolumn{1}{|c|}{\textbf{Changed}} & \multicolumn{1}{|c|}{\textbf{Deleted}} & \multicolumn{1}{|c|}{\textbf{Pct. Remaining}}\\ \hline
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Added}} & \multicolumn{1}{|c|}{\textbf{Changed}} & \multicolumn{1}{|c|}{\textbf{Deleted}} & \multicolumn{1}{|c|}{\textbf{\% Left}}\\ \hline
     \multicolumn{1}{|l|}{\textbf{Desktop}} & 1732   & 2605  & 148 & 91.45\% \\
     \multicolumn{1}{|l|}{\textbf{Tablet (avg).}} & 1233.5  & 1922.5  & 107 & 91.32\%\\
-    \multicolumn{1}{|l|}{\textbf{Mobile}} & 936   & 1214  & 18 & 98.08\% \\ \hline
+    \multicolumn{1}{|l|}{\textbf{Phone}} & 936   & 1214  & 18 & 98.08\% \\ \hline
     \end{tabular}%
   \label{tab:dm_cookie_counts_100}%
 \end{table}%
@@ -293,7 +293,7 @@ Another basic way to categorize cookies' longevities is by their expiration time
     \begin{tabular}{|c|c|c|c|c|}
     \hline
     \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{4}{|c|}{\textbf{Cookies - Top 500 Dataset}} \\ \cline{2-5}
-    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Added}} & \multicolumn{1}{|c|}{\textbf{Changed}} & \multicolumn{1}{|c|}{\textbf{Deleted}} & \multicolumn{1}{|c|}{\textbf{Pct. Remaining}}\\ \hline
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Added}} & \multicolumn{1}{|c|}{\textbf{Changed}} & \multicolumn{1}{|c|}{\textbf{Deleted}} & \multicolumn{1}{|c|}{\textbf{\% Left}}\\ \hline
 \multicolumn{1}{|l|}{\textbf{Desktop}} & 7355  & 13174  & 640 & 91.30\%\\
     \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 5396.5  & 6845.5  & 262 & 95.15\%\\
     \multicolumn{1}{|l|}{\textbf{Phone}} & 4387  & 4545  & 101 & 97.70\%\\ \hline
@@ -315,7 +315,7 @@ Another basic way to categorize cookies' longevities is by their expiration time
   \label{tab:dm_cookie_longeivity}%
 \end{table}%
 
-Next we turn to the number of JavaScript calls, including the third-party JavaScript calls. We define third-party JavaScript calls as in the previous section. Observe, in Tables~\ref{tab:dm_javascript_100} and~\ref{tab:dm_javascript_500} that the raw number of JavaScript calls as well as the proportion of calls by third-party entities fall from desktop to tablet to mobile phone. This suggests, from a tracking point of view, that JavaScript is increasingly used for purposes more in accordance with site mechanics (e.g. rendering) as opposed to tracking as devices move in the mobile direction. This could be a relic of the fact that since these mobile devices lack the same computing power as desktops adding additional JavaScript for purposes other than running the first-party content would slow browsing down to an unacceptable degree. Hence, one could hypothesize that, in general, trackers will use cookies (which do require significant computation power) more frequently when compared to JavaScript on mobile devices.
+Next we turn to the number of JavaScript calls, including the third-party JavaScript calls. We define third-party JavaScript calls as in the previous section. Observe, in Tables~\ref{tab:dm_javascript_100} and~\ref{tab:dm_javascript_500} that the raw number of JavaScript calls as well as the proportion of calls by third-party entities fall from desktop to tablet to mobile phone. This suggests, from a tracking point of view, that JavaScript is increasingly used for purposes more in accordance with site mechanics (e.g. rendering) as opposed to tracking as devices move in the mobile direction. This could be a relic of the fact that, since these mobile devices lack the same computing power as desktops, adding extra JavaScript for purposes other than running the first-party content would slow browsing down to an unacceptable degree. Hence, one could hypothesize that, in general, trackers will use cookies (which do not require significant computational power) more frequently when compared to JavaScript on mobile devices.
 
 
 \begin{table}[htbp]
@@ -323,8 +323,8 @@ Next we turn to the number of JavaScript calls, including the third-party JavaSc
   \caption{JavaScript call counts with Top 100 dataset}
     \begin{tabular}{|c|c|c|c|}
     \hline
-    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{JavaScript - Top 100 Dataset}} \\ \cline{2-4}
-    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Total Calls}} & \multicolumn{1}{|c|}{\textbf{3rd Party Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. 3rd Party Calls}}  \\ \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{JavaScript Calls - Top 100 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Total}} & \multicolumn{1}{|c|}{\textbf{3rd Party}} & \multicolumn{1}{|c|}{\textbf{\% 3rd Party}}  \\ \hline
     \multicolumn{1}{|l|}{\textbf{Desktop}} & 1763   & 1238  & 70.22\% \\
     \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 1244.5   & 864 & 69.43\%  \\
     \multicolumn{1}{|l|}{\textbf{Phone}} & 798  & 454  & 56.89\% \\ \hline
@@ -337,8 +337,8 @@ Next we turn to the number of JavaScript calls, including the third-party JavaSc
   \caption{JavaScript call counts with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|}
     \hline
-    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{JavaScript - Top 500 Dataset}} \\ \cline{2-4}
-    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Total Calls}} & \multicolumn{1}{|c|}{\textbf{3rd Party Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. 3rd Party Calls}} \\ \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{JavaScript Calls - Top 500 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Total}} & \multicolumn{1}{|c|}{\textbf{3rd Party}} & \multicolumn{1}{|c|}{\textbf{\% 3rd Party}} \\ \hline
     \multicolumn{1}{|l|}{\textbf{Desktop}} & 10912   & 7310  & 66.99\% \\
     \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 6165   & 3848  & 62.42\% \\
     \multicolumn{1}{|l|}{\textbf{Phone}} & 4053  & 2344 & 57.83\%\\ \hline
@@ -354,8 +354,8 @@ To test this hypothesis, in Table~\ref{tab:dm_cj_100} and Table~\ref{tab:dm_cj_5
   \caption{Cookie vs. JavaScript calls with Top 100 dataset}
     \begin{tabular}{|c|c|c|c|}
     \hline
-    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{Top 100 Dataset}} \\ \cline{2-4}
-    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Cookie Calls}} & \multicolumn{1}{|c|}{\textbf{JavaScript Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. Cookie Calls}}  \\ \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{Types of Calls - Top 100 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Cookie}} & \multicolumn{1}{|c|}{\textbf{JavaScript}} & \multicolumn{1}{|c|}{\textbf{\% Cookie}}  \\ \hline
     \multicolumn{1}{|l|}{\textbf{Desktop}} & 4337  & 1763  & 71.10\% \\
     \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 3156   & 1244.5 & 71.72\%  \\
     \multicolumn{1}{|l|}{\textbf{Phone}} & 2150  & 798  & 72.94\% \\ \hline
@@ -368,8 +368,8 @@ To test this hypothesis, in Table~\ref{tab:dm_cj_100} and Table~\ref{tab:dm_cj_5
   \caption{Cookie vs. JavaScript calls with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|}
     \hline
-    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{Top 500 Dataset}} \\ \cline{2-4}
-    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Cookie Calls}} & \multicolumn{1}{|c|}{\textbf{JavaScript Calls}} & \multicolumn{1}{|c|}{\textbf{Pct. Cookie Calls}}  \\ \hline
+    \multicolumn{1}{|c|}{\multirow{2}[4]{*}{\textbf{Device}}} & \multicolumn{3}{|c|}{\textbf{Types of Calls - Top 500 Dataset}} \\ \cline{2-4}
+    \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textbf{Cookie}} & \multicolumn{1}{|c|}{\textbf{JavaScript}} & \multicolumn{1}{|c|}{\textbf{\% Cookie}}  \\ \hline
     \multicolumn{1}{|l|}{\textbf{Desktop}} & 20529  & 10912  & 65.29\% \\
     \multicolumn{1}{|l|}{\textbf{Tablet (avg.)}} & 12242   & 6165 & 66.58\%  \\
     \multicolumn{1}{|l|}{\textbf{Phone}} & 8932  & 4053  & 68.79\% \\ \hline
@@ -401,6 +401,9 @@ In order to assess the viability of emulated devices for future research, we wil
 
 Given that our research is focused on privacy and web tracking techniques, cookies and JavaScript are two important mechanisms that we need to record as accurately as possible, considering that they are the most common means used by websites to store information on the client's side and to analyze the client's environment (e.g. installed plugins, screen size, system fonts). For this reason, we will compare cookie and JavaScript interactions seen in physical and emulated devices. At the same time, HTTP Responses will be used to determine if the actual content served to the emulated devices is the desired one or not. Throughout this section, we will be comparing the HTC Evo 4G with an emulated Nexus S smartphone, and the two physical tablets (Asus Pad TF300T and Samsung Galaxy Tab 2) with an emulated Nexus 7.
 
+\subsubsection{Cookie Interactions}
+
+
 \begin{figure*}[ht] 
 \centering \includegraphics[scale=0.30]{diagrams/cookies_cdf.png}
 \caption{Cookie size distribution with Top 500 dataset}
@@ -412,8 +415,6 @@ Given that our research is focused on privacy and web tracking techniques, cooki
 \caption{JavaScript script size distribution with Top 500 dataset}
 \label{fig:javascript_cdf}
 \end{figure*}
-
-\subsubsection{Cookie Interactions}
 
 There are three possible actions that can be taken when it comes to cookies: creation, modification and deletion. Tables \ref{tab:cookie_counts_100} and \ref{tab:cookie_counts_500} show the number of cookie events detected by our five mobile devices when crawling the Top 100 and Top 500 URL datasets respectively. It can be seen that the HTC Evo 4G and the Emulated Nexus S presented congruent numbers, while the three tablets appear to be remarkably dissimilar from one other.
 
@@ -668,7 +669,7 @@ One intriguing feature to examine in the ``Cookies" sections is the definition o
 
 One can see that the definitions of \textit{cookie} are driven by each website's primary usage of cookies. Both LinkedIn and Amazon state that the main purpose of cookies is to remember a user that has once visited the website before. One the other hand, CNN simply seems to use cookies for personalization purposes, so that is the definition they offer. It is also interesting to see that the cookie itself is described in three different ways: as a ``tiny data file", as a ``text file", and also as a ``unique identifier". This, for instance, is an indication that uniformity across all websites would be useful to avoid any kind of confusion among laypeople. 
 
-The other section we investigated in more detail was the ``Security" section of all the \pps. Amazon and LinkedIn mention SSL encryption directly \cite{amazon,linkedin}, while CNN is very vague and simply states: ``We have put in place appropriate physical, electronic, and managerial procedures to safeguard and help prevent unauthorized access, to maintain data security, and to use correctly the information we collect online” \cite{cnn}. It is unclear whether or not CNN even uses any kind of encryption at all, although due to the nature of the website, it is possible that this site may not require the encryption of any information. We did not study the extent to which this may be true. However, by simply clicking on the ``Log in" link, it does not seem as if this page is transmitted via HTTPS. Nonetheless, it makes sense for the other two websites to use SSL encryption since their website categories by nature require users to input and submit much more sensitive data, such as credit card numbers, and other personal information. The other issue with CNN's language is the fact that it is overly non-technical, which may imply that the authors of the \pp may simply not have technical knowledge. This is another sign that it may be helpful for policymakers to receive some technical education, which would make \pps more uniform and informative.
+The other section we investigated in more detail was the ``Security" section of all the \pps. Amazon and LinkedIn mention SSL encryption directly \cite{amazon,linkedin}, while CNN is very vague and simply states: ``We have put in place appropriate physical, electronic, and managerial procedures to safeguard and help prevent unauthorized access, to maintain data security, and to use correctly the information we collect online" \cite{cnn}. It is unclear whether or not CNN even uses any kind of encryption at all, although due to the nature of the website, it is possible that this site may not require the encryption of any information. We did not study the extent to which this may be true. However, by simply clicking on the ``Log in" link, it does not seem as if this page is transmitted via HTTPS. Nonetheless, it makes sense for the other two websites to use SSL encryption since their website categories by nature require users to input and submit much more sensitive data, such as credit card numbers, and other personal information. The other issue with CNN's language is the fact that it is overly non-technical, which may imply that the authors of the \pp may simply not have technical knowledge. This is another sign that it may be helpful for policymakers to receive some technical education, which would make \pps more uniform and informative.
 
 In the end, we can conclude based on the first three stages of our case study that LinkedIn's meticulously written privacy policy is the most useful for various kinds of users. Their privacy summary is an incredibly helpful tool, especially for those users who want to be informed about what their social network is doing with respect to their data and privacy, but do not or cannot take the time to read through the entire document. In addition, the fact that LinkedIn also includes a separate Cookie Policy shows that they put the time into creating documents that would fully inform their users. Another intriguing case study would be to compare LinkedIn's \pp with that of other social networks to see if our conclusion about \pps of social networks holds. 
 
