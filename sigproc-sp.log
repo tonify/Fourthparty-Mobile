@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 10:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.2)  15 JAN 2013 11:08
 entering extended mode
 **sigproc-sp.tex
 (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.tex
@@ -491,6 +491,12 @@ Overfull \hbox (4.2027pt too wide) in paragraph at lines 338--347
  [][][] 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [4]
 Overfull \hbox (4.88603pt too wide) in paragraph at lines 391--392
 []\T1/aer/bx/n/9 Developer-Friendly\T1/aer/m/n/9 : em-u-lated de-vices are com-
@@ -581,6 +587,9 @@ Overfull \hbox (4.6653pt too wide) in paragraph at lines 576--587
  [][][] 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [8 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/diagrams/javascript_cd
 f.png>] <at-a-glance.png, id=44, 451.08525pt x 436.029pt>
 File: at-a-glance.png Graphic file (type png)
@@ -593,10 +602,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 632--633
  [][] 
  []
 
-
-Underfull \vbox (badness 3428) has occurred while \output is active []
-
- [9]
+[9 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/at-a-glance.png>]
 Underfull \hbox (badness 1221) in paragraph at lines 662--663
 \T1/aer/m/n/9 puter's browser to store your pref-er-ences.
  []
@@ -606,12 +612,8 @@ Overfull \hbox (3.60434pt too wide) in paragraph at lines 656--668
  [][][] 
  []
 
-[10 <C:/Users/a1gaius/Documents/GitHub/Fourthparty-Mobile/at-a-glance.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl) [11]
-(C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux) ) 
+[10] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.bbl)
+[11] (C:\Users\a1gaius\Documents\GitHub\Fourthparty-Mobile\sigproc-sp.aux) ) 
 Here is how much of TeX's memory you used:
  6441 strings out of 494045
  90971 string characters out of 3145963
@@ -620,19 +622,20 @@ Here is how much of TeX's memory you used:
  49938 words of font info for 69 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  42i,13n,41p,1446b,1679s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
-mb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sigproc-sp.pdf (11 pages, 358203 bytes).
+{C:
+/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.
+pfb>
+Output written on sigproc-sp.pdf (11 pages, 358084 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

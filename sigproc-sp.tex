@@ -349,7 +349,7 @@ Next, we turn to the number of JavaScript calls, including the third-party JavaS
 To test this hypothesis, in Table~\ref{tab:dm_cj_100} and Table~\ref{tab:dm_cj_500}, we compared the number of cookie calls against the number of JavaScript calls across the different devices. Here, we defined the number of cookie calls as the sum of the number of cookies added during the crawl plus the number of cookie changes. Observe that the proportion of cookie calls hovers in the high 60's and low 70's percentages. Similarly, notice that this proportion is slightly but noticeably higher for mobile phones when compared to tablets and tablets when compared to desktops.
 
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie vs. JavaScript calls with Top 100 dataset}
     \begin{tabular}{|c|c|c|c|}
@@ -363,7 +363,7 @@ To test this hypothesis, in Table~\ref{tab:dm_cj_100} and Table~\ref{tab:dm_cj_5
   \label{tab:dm_cj_100}%
 \end{table}%
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{Cookie vs. JavaScript calls with Top 500 dataset}
     \begin{tabular}{|c|c|c|c|}
@@ -570,7 +570,7 @@ A high-level picture of the JavaScript code that was executed in the mobile brow
 
 Table \ref{tab:javascript_sizes} gives the average size in Bytes of the JavaScript files executed on each device during the Top 500 crawl. All averages have the same order of magnitude, so a more in-depth approach is in order.  Similar to what was done with the cookie sizes, we performed a best-fit analysis with the help of 2R Soft\footnote{http://www.2rsoft.tk} and selected the most appropriate cumulative density function (CDF). Judging by the Anderson-Darling statistic, all crawls are best represented by a logistic distribution with parameters given in Table \ref{tab:javascript_sizes}. The end results are plotted in Figure \ref{fig:javascript_cdf}. Interestingly, the two emulated devices have JavaScript size CDF curves that are closer to each other than to that of any of the physical devices. In addition, all three physical devices have practically the same JavaScript size CDF curve. Nonetheless, the distance between the curves associated with emulated devices and the curves associated with their physical counterparts is relatively small in comparison with what was seen in the cookie size CDFs (Figure \ref{fig:cookie_cdf}) when dealing with tablets.
 
-\begin{table}[htbp]
+\begin{table}[h]
   \centering
   \caption{JavaScript script size distribution, Top 500 dataset}
     \begin{tabular}{|c|c|p{2.3cm}|}
