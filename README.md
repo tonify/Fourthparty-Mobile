@@ -1,4 +1,4 @@
 Fourthparty-Mobile
 ==================
 
-The .tex files for the report.
+This project is about collecting and analyzing web tracking data on mobile devices.
