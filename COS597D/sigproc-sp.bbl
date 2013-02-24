@@ -1,0 +1,50 @@
+\begin{thebibliography}{10}
+
+\bibitem{amazon}
+{A}mazon.com {I}nc.
+\newblock {A}mazon.com {P}rivacy {N}otice, Apr 2012.
+
+\bibitem{supercookies}
+J.~Angwin.
+\newblock Latest in web tracking: Stealthy 'supercookies'.
+
+\bibitem{FLASH_COOKIES}
+M.~Ayenson, D.~J. Wambach, A.~Soltani, N.~Good, and C.~J. Hoofnagle.
+\newblock Flash cookies and privacy ii: Now with html5 and etag respawning.
+\newblock July 2011.
+
+\bibitem{linkedin}
+{L}inked{I}n {C}orporation.
+\newblock {P}rivacy {P}olicy, Jun 2011.
+
+\bibitem{announcing_sdk}
+D.~Mason.
+\newblock Announcing add-on sdk 1.5!, Feb 2012.
+
+\bibitem{mayer}
+J.~R. Mayer and J.~C. Mitchell.
+\newblock Third-party web tracking: Policy and technology.
+\newblock In {\em Proceedings of the 2012 IEEE Symposium on Security and
+  Privacy}, SP '12, pages 413--427, Washington, DC, USA, 2012. IEEE Computer
+  Society.
+
+\bibitem{soltani}
+A.~Soltani, S.~Canty, Q.~Mayo, L.~Thomas, and C.~J. Hoofnagle.
+\newblock Flash cookies and privacy.
+\newblock Aug 2009.
+
+\bibitem{timmins}
+P.~Timmins, S.~McCormick, E.~Agu, and C.~Wills.
+\newblock Characteristics of mobile web content.
+\newblock In {\em Hot Topics in Web Systems and Technologies, 2006. HOTWEB '06.
+  1st IEEE Workshop on}, pages 1 --10, nov. 2006.
+
+\bibitem{truste}
+{T}{R}{U}{S}{T}e.
+\newblock {O}nline privacy services - {O}nline trust and safety.
+
+\bibitem{cnn}
+{T}urner {B}roadcasting~{S}ystem {I}nc.
+\newblock {C}{N}{N} {P}rivacy {S}tatement, Feb 2011.
+
+\end{thebibliography}
